@@ -6,6 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        :root{
+            --primaryColor: #10B0FF;
+        }
+        /* *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        } */
+        header{
+            display: flex;
+            justify-content:space-between;
+        }
         body {
             text-align: center;
             color: gray;
@@ -14,13 +26,28 @@
         a {
             text-decoration: none;
         }
+        button{
+            border: 3px dashed var(--primaryColor);
+            background-color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        img{
+            height: 57px;
+        }
     </style>
 </head>
 
 <body>
-    <h1>Coming Soon..</h1>
-    <h2>Site Under Construction</h2>
-    <h3>Here's the link to my <a href="https://github.com/karthiksgujjar">GitHub Repo</a></h3>
+    <header>
+        <a href="#"><img src="Images/Logo/Khz Emblem NoBG.png" alt="Khz Logo"></a>
+        <a href="Resume/Karthik S Resume Final.pdf" download="Karthik S Resume"><button type="button">Download <br> CV / Resume</button></a>
+    </header>
+    <main>
+        <h1>Coming Soon..</h1>
+        <h2>Site Under Construction</h2>
+        <h3>Here's the link to my <a href="https://github.com/karthiksgujjar">GitHub Repo</a></h3>
+    </main>
 </body>
 
 </html>
