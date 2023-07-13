@@ -114,6 +114,11 @@ section {
     column-gap: 2em;
 }
 
+.tech-stack{
+    display: flex;
+    flex-wrap: wrap;
+}
+
 #projectButtonLinks{
     margin-top: 1em;
 
