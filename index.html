@@ -4,49 +4,131 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        :root{
-            --primaryColor: #10B0FF;
-        }
-        /* *{
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        } */
-        header{
-            display: flex;
-            justify-content:space-between;
-        }
-        body {
-            text-align: center;
-            color: gray;
-        }
-
-        a {
-            text-decoration: none;
-        }
-        button{
-            border: 3px dashed var(--primaryColor);
-            background-color: white;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        img{
-            height: 57px;
-        }
-    </style>
+    <title>Karthik's Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 
 <body>
     <header>
-        <a href="#"><img src="Images/Logo/Khz Emblem NoBG.png" alt="Khz Logo"></a>
-        <a href="Resume/Karthik S Resume Final.pdf" download="Karthik S Resume"><button type="button">Download <br> CV / Resume</button></a>
+        <logo>
+            <a href="#" style="margin-left: 1em;"><img style=" height: 57px;" src="Images/Logo/Khz Emblem NoBG.png"
+                    alt="Khz Logo"></a>
+        </logo>
+        <nav>
+            <a href="#intro">Home</a>
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </nav>
     </header>
     <main>
-        <h1>Coming Soon..</h1>
-        <h2>Site Under Construction</h2>
-        <h3>Here's the link to my <a href="https://github.com/karthiksgujjar">GitHub Repo</a></h3>
+        <section id="intro">
+            <img style="max-width: 100%;" src="Images/Karthik S Image NoBG.png" alt="Karthik S Image">
+            <div id="text-intro">
+                <p class="title">Karthik S</p>
+                <p class="description">A passionate, aspiring Software Developer from <a
+                        href="https://goo.gl/maps/j18oxq64GZDvTGHC8" target="_blank"
+                        style="text-decoration: underline;">Karnataka, India.</a></p>
+                <div id="links">
+                    <a href="Resume/Karthik S Resume Final.pdf" download="Karthik S Resume"><button type="button"
+                            id="download-resume">Download Resume</button></a>
+                    <a href="https://github.com/karthiksgujjar" target="_blank"><img src="Images/Logo/github.png"
+                            alt="GitHub Logo"></a>
+                    <a href="https://www.linkedin.com/in/karthik-s-158620276" target="_blank"><img
+                            src="Images/Logo/linkedin.png" alt="LinkedIn Logo"></a>
+                </div>
+            </div>
+        </section>
+
+        <section id="about">
+            <p class="title main-title">About Me</p>
+            <div id="about-description">
+                <img style="max-width:100%" src="Images/About Me Section.jpg" alt="Motivation Image1">
+                <p class="descriptionLenghty">Recent BCA graduate, an aspiring candidate who tried various domains,
+                    learnt
+                    basic skills. Having realized that, “domain interest varies with time but zeal to learn and grow
+                    remains
+                    constant”, now trying to settle in Web development alongside seeking an entry level programmer or
+                    developer role to harness my technical skills, up skill knowledge plus hoping to be a tech genius in
+                    the
+                    industry one day.</p>
+            </div>
+        </section>
+
+        <section id="projects">
+            <p class="title main-title">Projects</p>
+            <div id="projects-collection">
+                <div class="card SolarSystemProject">
+                    <img style="max-width: 300px;" src="Images/SolarSystem.png"
+                        alt="Solar System Image from the website">
+                    <div class="card-content">
+                        <p class="title">Solar System</p>
+                        <p class="project-description">Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                            Nesciunt exercitationem iste, voluptatum, quia explicabo laboriosam rem adipisci voluptates
+                            cumque, veritatis atque nostrum corrupti ipsa asperiores harum? Dicta odio aut hic.</p>
+                        <div id="projectButtonLinks">
+
+                            <a href="https://github.com/karthiksgujjar/SolarSystem" class="projectButton"
+                                target="_blank">View Code</a>
+                            <a href="https://karthiksgujjar.github.io/SolarSystem" class="projectButton"
+                                target="_blank">Open Website</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card SLSProject">
+                    <img style="max-width: 300px;" src="Images/SLS.png"
+                        alt="Simple Library Surfer desktop application's main form image">
+                    <div class="card-content">
+                        <p class="title">Simple Library Surfer</p>
+                        <p class="project-description">Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                            Nesciunt exercitationem iste, voluptatum, quia explicabo laboriosam rem adipisci voluptates
+                            cumque, veritatis atque nostrum corrupti ipsa asperiores harum? Dicta odio aut hic.</p>
+                        <div id="projectButtonLinks">
+                            <a href="https://github.com/karthiksgujjar/SLS" class="projectButton"
+                                target="_blank">View Code</a>
+                            <a href="https://karthiksgujjar.github.io/SLS/" class="projectButton"
+                                target="_blank">Open Website</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card PGMSProject">
+                    <img style="max-width: 300px;" src="Images/PGMS.png"
+                        alt="Paying Guest Management System desktop application's main form image">
+                    <div class="card-content">
+                        <p class="title">Paying Guest Management System</p>
+                        <p class="project-description">Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                            Nesciunt exercitationem iste, voluptatum, quia explicabo laboriosam rem adipisci voluptates
+                            cumque, veritatis atque nostrum corrupti ipsa asperiores harum? Dicta odio aut hic.</p>
+                        <div id="projectButtonLinks">
+                            <a href="https://github.com/karthiksgujjar/PGMS" class="projectButton"
+                                target="_blank">View Code</a>
+                            <a href="https://karthiksgujjar.github.io/PGMS/" class="projectButton"
+                                target="_blank">Open Website</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <p class="title main-title">Contact Me</p>
+            <div id="contact-content">
+                <img style="max-width: 300px; margin-top: 2em; display: inline-block;" src="Images/Contact Me.png" alt="Contact Me Image">
+                <div id="contact-links">
+                    <div id="mail">
+                        <img style="margin-right: 0.5em;" src="Images//Icons/mailme.png" alt="eMail icon">
+                        <a style="text-decoration: underline;" target="_blank"
+                            href="mailto:karthiksgujjar@gmail.com?subject=Contacting through mail ID provided in Solar System website.">karthiksgujjar@gmail.com</a>
+                    </div>
+                    <div id="phone">
+                        <img style="margin-right: 0.5em;" src="Images/Icons/callme.png" alt="callme icon">
+                        <a style="text-decoration: underline;" href="tel:+917676331323">+91 7676331323</a>
+                    </div>
+            </div>
+            </div>
+        </section>
+
     </main>
 </body>
 

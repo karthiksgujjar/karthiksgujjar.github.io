@@ -1,0 +1,160 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: initial;
+}
+
+button {
+    outline: none;
+    border: none;
+    background-color: rgba(0, 0, 0, 0);
+    cursor: pointer;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    z-index: 1;
+    position: sticky;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 1em;
+}
+
+nav {
+    margin-top: 1em;
+    margin-right: 1em;
+}
+
+nav>a {
+    font-size: large;
+    border-radius: 0.5em;
+    padding: 0.15em;
+    margin-right: 0.5em;
+}
+
+nav>a:hover {
+    color: white;
+    background-color: black;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    row-gap: 5em;
+}
+
+section {
+    height: fit-content;
+    margin-left: 1em;
+    margin-right: 1em;
+}
+
+#intro {
+    display: flex;
+    align-items: center;
+    position: relative;
+    flex-wrap: wrap;
+}
+
+.title {
+    font-size: xx-large;
+    font-weight: bolder;
+}
+
+.main-title{
+    margin-left: 2em;
+}
+
+.description {
+    color: #343434;
+}
+
+.descriptionLenghty {
+    text-align: justify;
+    font-size: medium;
+}
+
+#links {
+    display: flex;
+}
+
+#links>a {
+    margin-top: 1.5em;
+    margin-right: 1.5em;
+}
+
+#download-resume {
+    color: white;
+    background-image: linear-gradient(to right, black, gray);
+    border-radius: 0.2em;
+    padding: 0.35em;
+}
+
+#display-picture {
+    align-items: flex-start;
+}
+
+#about-description {
+    display: flex;
+    column-gap: 2em;
+    margin-top: 1em;
+}
+
+.card{
+    display: flex;
+    margin-top: 1em;
+    column-gap: 2em;
+}
+
+#projectButtonLinks{
+    margin-top: 1em;
+
+}
+
+.projectButton{
+    color: white;
+    background-image: linear-gradient(to right, black, gray);
+    border-radius: 0.2em;
+    padding: 0.25em;
+    margin-right: 1em;
+}
+
+#contact-content{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#contact-links{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#mail, #phone{
+    display: flex;
+    align-items: center;
+    padding: 1em;
+}
+
+@media (max-width:900px) {
+    #intro {
+        align-items: flex-start;
+    }
+
+    #about-description {
+        flex-wrap: wrap;
+    }
+
+    .card{
+    flex-wrap: wrap;
+    }
+}
