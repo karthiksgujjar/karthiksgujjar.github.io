@@ -55,6 +55,7 @@ section {
     height: fit-content;
     margin-left: 1em;
     margin-right: 1em;
+    padding-top: 61px;
 }
 
 #intro {
@@ -67,10 +68,6 @@ section {
 .title {
     font-size: xx-large;
     font-weight: bolder;
-}
-
-.main-title{
-    margin-left: 2em;
 }
 
 .description {
@@ -121,7 +118,7 @@ section {
 
 #projectButtonLinks{
     margin-top: 1em;
-
+    margin-bottom: 2em;
 }
 
 .projectButton{
@@ -144,7 +141,7 @@ section {
     flex-wrap: wrap;
 }
 
-#mail, #phone{
+#mail, #phone, #whatsapp{
     display: flex;
     align-items: center;
     padding: 1em;
