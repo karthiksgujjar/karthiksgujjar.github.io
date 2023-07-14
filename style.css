@@ -20,7 +20,7 @@ header {
     position: sticky;
     top: 0;
     background-color: rgba(0, 0, 0, 0.1);
-    border-radius: 1em;
+    border-radius: 0 0 1em 1em;
 }
 
 nav {
@@ -36,8 +36,7 @@ nav>a {
 }
 
 nav>a:hover {
-    color: white;
-    background-color: black;
+    background-color: lightblue;
 }
 
 a {
