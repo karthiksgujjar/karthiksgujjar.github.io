@@ -7,13 +7,6 @@
     scroll-behavior: smooth;
 }
 
-button {
-    outline: none;
-    border: none;
-    background-color: rgba(0, 0, 0, 0);
-    cursor: pointer;
-}
-
 header {
     display: flex;
     justify-content: space-between;
@@ -38,7 +31,7 @@ nav>a {
 }
 
 nav>a:hover {
-    background-color: lightblue;
+    background-color: #03ABFF;
 }
 
 a {
@@ -75,9 +68,8 @@ section {
     color: #343434;
 }
 
-.descriptionLenghty {
-    text-align: justify;
-    font-size: medium;
+.link-underline{
+    text-decoration: underline;
 }
 
 #links {
@@ -89,21 +81,25 @@ section {
     margin-right: 1.5em;
 }
 
-#download-resume {
+.linkButton {
+    outline: none;
+    border: none;
+    background-color: rgba(0, 0, 0, 0);
     color: white;
     background-image: linear-gradient(to right, black, gray);
     border-radius: 0.1em 0.1em 0.5em 0.5em;
     padding: 0.35em;
 }
 
-#display-picture {
-    align-items: flex-start;
-}
-
 #about-description {
     display: flex;
     column-gap: 2em;
     margin-top: 1em;
+}
+
+.descriptionLenghty {
+    text-align: justify;
+    font-size: medium;
 }
 
 .card {
@@ -115,22 +111,14 @@ section {
     border-radius: 0.1em 0.1em 1em 1em;
 }
 
-.tech-stack {
-    display: flex;
-    flex-wrap: wrap;
+.card > img{
+    max-width: 300px; 
+    border-radius: 0.1em 0.1em 1em 1em;
 }
 
 #projectButtonLinks {
     margin-top: 1em;
     margin-bottom: 2em;
-}
-
-.projectButton {
-    color: white;
-    background-image: linear-gradient(to right, black, gray);
-    border-radius: 0.1em 0.1em 0.5em 0.5em;
-    padding: 0.25em;
-    margin-right: 1em;
 }
 
 #contact-content {
@@ -140,9 +128,13 @@ section {
     flex-wrap: wrap;
 }
 
-#contact-links {
+.tech-stack, #contact-links {
     display: flex;
     flex-wrap: wrap;
+}
+
+.tech-stack > img{
+    max-width: 100%;
 }
 
 #mail,
@@ -151,6 +143,10 @@ section {
     display: flex;
     align-items: center;
     padding: 1em;
+}
+
+#contact-links img {
+    margin-right: 0.5em;
 }
 
 @media (max-width:900px) {

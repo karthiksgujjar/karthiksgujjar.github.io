@@ -9,19 +9,19 @@ document.addEventListener('scroll', () => {
     if(introSection.getBoundingClientRect().y < 1)
     {
         bgColorNeutralizer();
-        headerTag.lastElementChild.children[0].style.backgroundColor='lightblue';
+        headerTag.lastElementChild.children[0].style.backgroundColor='#03ABFF';
     }
     if(aboutSection.getBoundingClientRect().y < 1) {
         bgColorNeutralizer();
-        headerTag.lastElementChild.children[1].style.backgroundColor='lightblue';
+        headerTag.lastElementChild.children[1].style.backgroundColor='#03ABFF';
     }
     if(projectsSection.getBoundingClientRect().y < 1){
         bgColorNeutralizer();
-        headerTag.lastElementChild.children[2].style.backgroundColor='lightblue';
+        headerTag.lastElementChild.children[2].style.backgroundColor='#03ABFF';
     }
     if(contactSection.getBoundingClientRect().y<600){
         bgColorNeutralizer();
-        headerTag.lastElementChild.children[3].style.backgroundColor='lightblue';
+        headerTag.lastElementChild.children[3].style.backgroundColor='#03ABFF';
     }
 });
 
