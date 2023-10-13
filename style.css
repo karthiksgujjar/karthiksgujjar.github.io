@@ -6,6 +6,7 @@
     box-sizing: border-box;
     font-family: 'Roboto Slab', Georgia, 'Times New Roman', serif;
     scroll-behavior: smooth;
+    /* font-size: 1rem; */
 }
 
 header {
@@ -18,11 +19,11 @@ header {
     border-radius: 0 0 1em 1em;
 }
 
-nav {
+#navLinks {
     margin-right: 1em;
 }
 
-nav>a {
+#navLinks a {
     font-size: large;
     padding: 0.15em;
     margin-right: 0.5em;
@@ -31,10 +32,11 @@ nav>a {
 
 #navLinksSelectOption{
     display: none;
-    border: none;
     outline: none;
+    border: none;
+    cursor: pointer;
     text-align: center;
-    appearance: none;
+    width: fit-content;
     font-size: large;
     padding: 0 0.5em;
     border-radius: 0.5em;
@@ -124,9 +126,10 @@ section {
     border-radius: 0.2em;
 }
 
-#projectButtonLinks {
+.projectButtonLinks {
     margin-top: 1em;
     margin-bottom: 2em;
+    
 }
 
 #contact-content {
@@ -173,8 +176,20 @@ section {
 }
 
 @media (max-width:500px) {
-    nav{
+    #navLinks{
         display: none;
+    }
+
+    #navLinks.active{
+        display: flex;
+        position: absolute;
+        flex-direction: column;
+        right: 0.6em;
+        top: 4em;
+        width: max-content;
+        background-color: black;
+        padding: 0.5em;
+        border-radius: 1em;
     }
 
     #navLinksSelectOption{

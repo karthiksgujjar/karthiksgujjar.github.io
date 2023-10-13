@@ -20,18 +20,13 @@
                     alt="Khz Emblem"></a>
         </logo>
         
-        <select id="navLinksSelectOption">
-            <option>Home</option>
-            <option>About</option>
-            <option>Projects</option>
-            <option>Contact</option>
-        </select>
+        <button id="navLinksSelectOption" onclick="navLinksDisplay();">Home <span>&Or;</span></button>
         
-        <nav>
-            <a href="#intro">Home</a>
-            <a href="#about">About</a>
-            <a href="#projects">Projects</a>
-            <a href="#contact">Contact</a>
+        <nav id="navLinks">
+            <a href="#intro" onclick="navLinksDisplay();">Home</a>
+            <a href="#about" onclick="navLinksDisplay();">About</a>
+            <a href="#projects" onclick="navLinksDisplay();">Projects</a>
+            <a href="#contact" onclick="navLinksDisplay();">Contact</a>
         </nav>
 
     </header>
@@ -87,7 +82,7 @@
                             <img src="Images/Icons/css3.webp" alt="CSS3 icon">
                             <img src="Images/Icons/js.webp" alt="JS icon">
                         </div>
-                        <div id="projectButtonLinks">
+                        <div class="projectButtonLinks">
                             <a href="https://github.com/karthiksgujjar/SolarSystem" class="linkButton"
                                 target="_blank">View Code</a>
                             <a href="https://karthiksgujjar.github.io/SolarSystem" class="linkButton"
@@ -108,7 +103,7 @@
                             <img src="Images/Icons/csharp.webp" alt="C# icon">
                             <img src="Images/Icons/mysql.webp" alt="MySQL icon">
                         </div>
-                        <div id="projectButtonLinks">
+                        <div class="projectButtonLinks">
                             <a href="https://github.com/karthiksgujjar/SLS" class="linkButton" target="_blank">View
                                 Code</a>
                             <a href="https://karthiksgujjar.github.io/SLS/" class="linkButton" target="_blank">Open
@@ -117,20 +112,18 @@
                     </div>
                 </div>
                 <div class="card PGMSProject">
-                    <img src="Images/PGMS.webp"
-                        alt="Paying Guest Management System desktop application's main form image">
+                    <img src="Images/PGMS.webp" alt="Paying Guest Management System desktop application's main form image">
                     <div class="card-content">
                         <p class="title">Paying Guest Management System</p>
                         <p class="project-description">This application allows the PG managing department to manage
-                            guests. instead of physical ledgers, it computerizes the work and saves the productive time
-                            of the owner</p>
+                            guests. instead of physical ledgers, it computerizes the work and saves the productive time of the owner</p>
                         <div class="tech-stack">
                             <p class="description">Tech Stack:</p>
                             <img src="Images/Icons/dotnet.webp" alt="Microsoft .Net icon">
                             <img src="Images/Icons/csharp.webp" alt="C# icon">
                             <img src="Images/Icons/mysql.webp" alt="MySQL icon">
                         </div>
-                        <div id="projectButtonLinks">
+                        <div class="projectButtonLinks">
                             <a href="https://github.com/karthiksgujjar/PGMS" class="linkButton" target="_blank">View
                                 Code</a>
                             <a href="https://karthiksgujjar.github.io/PGMS/" class="linkButton" target="_blank">Open
