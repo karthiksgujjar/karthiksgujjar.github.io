@@ -21,11 +21,9 @@ document.addEventListener('scroll', () => {
         navList.classList.remove('active');
 
     }
-    if(introSection.getBoundingClientRect().y > 1){
+    else{
         propertiesNeutralizer();
         textColorAndHeaderBGColorNeutralizer();
-        if(screen.width < 500)
-            navLinksWhiteColorSetter();
     }
 
     if(aboutSection.getBoundingClientRect().y < 1) {
@@ -54,7 +52,7 @@ document.addEventListener('scroll', () => {
         navList.classList.remove('active');
     }
     
-    if(contactSection.getBoundingClientRect().y<800){
+    if(contactSection.getBoundingClientRect().y<700){
         
         propertiesNeutralizer();
 
