@@ -6,8 +6,6 @@ const contactSection = document.getElementById('contact');
 const navLinksSelctOptions = document.getElementById('navLinksSelectOption');
 const navList = document.getElementById('navLinks');
 
-window.onresize = function() { location.reload(); }
-
 document.addEventListener('scroll', () => {
     if(introSection.getBoundingClientRect().y < 1)
     {
@@ -56,7 +54,7 @@ document.addEventListener('scroll', () => {
         navList.classList.remove('active');
     }
     
-    if(contactSection.getBoundingClientRect().y<600){
+    if(contactSection.getBoundingClientRect().y<800){
         
         propertiesNeutralizer();
 
