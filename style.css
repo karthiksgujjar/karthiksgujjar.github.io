@@ -161,10 +161,11 @@ details > ul {
 
 .roll-down-on-click {
   cursor: pointer;
-  box-shadow: 0 0 2px black;
-  width: fit-content;
+  box-shadow: 0 0 10px black;
   padding: 0.3em;
   border-radius: 0.7em;
+  text-align: center;
+  margin: 0 3em;
 }
 
 #other-projects {
@@ -174,13 +175,12 @@ details > ul {
 #other-projects-collection-tiles {
   display: none;
   flex-wrap: wrap;
-  box-shadow: 0 0 10px black;
+  box-shadow: 0 0 3px black;
   border-radius: 1em;
   padding: 0.5em;
   gap: 0.5em;
-  margin: 1.5em 0;
+  margin: 1em 3em;
   justify-content: center;
-  width: fit-content;
 }
 
 #other-projects-collection-tiles.active {
@@ -194,7 +194,7 @@ details > ul {
 }
 
 .tile > img {
-  max-width: 200px;
+  width: 200px;
   border-radius: 0.5em;
   margin: 0.5em;
   cursor: pointer;
@@ -210,7 +210,6 @@ details > ul {
 
 #individual-other-projects-collection.active{
   display: block;
-  
 }
 
 .individual-other-project {
