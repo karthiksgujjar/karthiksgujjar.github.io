@@ -5,6 +5,8 @@ const projectsSection = document.getElementById("projects");
 const contactSection = document.getElementById("contact");
 const navLinksSelctOptions = document.getElementById("navLinksSelectOption");
 const navList = document.getElementById("navLinks");
+let otherProjectModal = null;
+let individualOtherProjectCollection = null;
 
 document.addEventListener("scroll", () => {
   if (introSection.getBoundingClientRect().y < 1) {
@@ -108,32 +110,6 @@ function navLinksWhiteColorSetter() {
   });
 }
 
-function displayTechStack(stackNumber){
-  const stackToDisplay = document.getElementsByClassName('stack')[stackNumber];
-  stackToDisplay.classList.toggle('active');
-
-  const techStack = document.getElementsByClassName("tech-stack")[stackNumber];
-  if(stackToDisplay.classList.contains("active")){
-    techStack.firstElementChild.firstElementChild.firstElementChild.innerHTML = "&And;";
-  }
-  else{
-    techStack.firstElementChild.firstElementChild.firstElementChild.innerHTML = "&Or;";
-  }
-}
-
-function displaySkillsLearnt(skillSetNumber){
-  const skillSet = document.querySelectorAll('.skills-learnt > ul')[skillSetNumber];
-  skillSet.classList.toggle('active');
-
-  const skillLearnt = document.getElementsByClassName('skills-learnt')[skillSetNumber];
-  if(skillSet.classList.contains('active')){
-    skillLearnt.firstElementChild.firstElementChild.firstElementChild.innerHTML = "&And;";
-  }
-  else{
-    skillLearnt.firstElementChild.firstElementChild.firstElementChild.innerHTML = "&Or;";
-  }
-}
-
 function displayOtherProjects(){
   const otherProjectsCollectionTiles = document.getElementById('other-projects-collection-tiles');
   otherProjectsCollectionTiles.classList.toggle('active');
@@ -147,14 +123,22 @@ function displayOtherProjects(){
 }
 
 function displayOtherProjectModal(otherProjectNumber){
-const otherProjectModal = document.getElementsByClassName('individual-other-project')[otherProjectNumber];
+otherProjectModal = document.getElementsByClassName('individual-other-project')[otherProjectNumber];
 
 otherProjectModal.clientTop = headerTag.offsetTop;
 
-otherProjectModal.style.top = headerTag.offsetTop + 70 + "px";
+otherProjectModal.style.top = headerTag.offsetTop + 100 + "px";
 otherProjectModal.classList.toggle('active');
 
-const shadowEffect = document.getElementById('shadow-effect');
-shadowEffect.style.display = 'block';
+individualOtherProjectCollection = document.getElementById('individual-other-projects-collection');
+individualOtherProjectCollection.classList.toggle('active');
+}
 
+window.onclick = function (event) {
+  console.log(event.target)
+  if(event.target == individualOtherProjectCollection){
+    otherProjectModal.classList.toggle('active');
+individualOtherProjectCollection.classList.toggle('active');
+
+  }
 }

@@ -73,28 +73,26 @@
 
         <div class="card">
           <img src="Images/SolarSystem.webp" alt="Solar System Image from the website" />
-          <p class="title">Solar System</p>
+          <p class="projectTitle">Solar System</p>
           <p>
             A static website showcasing our “SOLAR SYSTEM” in the Milky Way
             Galaxy. After eliminating redundant data which are hard to go
             through, we are providing small yet powerful website which can be used for viewing overall data of the
             planets.
           </p>
-          <div class="tech-stack" onclick="displayTechStack(0)">
-            <p class="roll-down-on-click"><b>Tech Stack <span>&Or;</span></b></p>
-            <div class="stack">
-              <img src="Images/Icons/html5.webp" alt="HTML5 icon" />
-              <img src="Images/Icons/css3.webp" alt="CSS3 icon" />
-            </div>
-          </div>
-          <div class="skills-learnt" onclick="displaySkillsLearnt(0)">
-            <p class="roll-down-on-click"><b>Skills Learnt <span>&Or;</span></b></p>
+          <details>
+            <summary>Tech Stack</summary>
+            <img src="Images/Icons/html5.webp" alt="HTML5 icon" />
+            <img src="Images/Icons/css3.webp" alt="CSS3 icon" />
+          </details>
+          <details>
+            <summary>Skills Learnt</summary>
             <ul>
               <li>HTML5</li>
               <li>CSS3</li>
               <li>Website Layout Designing</li>
             </ul>
-          </div>
+          </details>
           <div class="project-button-links">
             <a href="https://github.com/karthiksgujjar/SolarSystem" class="linkButton" target="_blank">View Code</a>
             <a href="https://karthiksgujjar.github.io/SolarSystem" class="linkButton" target="_blank">Open Website</a>
@@ -103,28 +101,27 @@
 
         <div class="card">
           <img src="Images/SLS.webp" alt="Simple Library Surfer desktop application's main form image" />
-          <p class="title">Simple Library Surfer</p>
+          <p class="projectTitle">Simple Library Surfer</p>
           <p>
             This mini project is not Library Management System in itself,
             rather it displays details of the books in the library such as Name, Author and ID of the Book.
           </p>
-          <div class="tech-stack" onclick="displayTechStack(1)">
-            <p class="roll-down-on-click"><b>Tech Stack <span>&Or;</span></b></p>
-            <div class="stack">
-              <img src="Images/Icons/dotnet.webp" alt="Microsoft .Net icon" />
-              <img src="Images/Icons/csharp.webp" alt="C# icon" />
-              <img src="Images/Icons/mysql.webp" alt="MySQL icon" />
-            </div>
-          </div>
-          <div class="skills-learnt" onclick="displaySkillsLearnt(1)">
-            <p class="roll-down-on-click"><b>Skills Learnt <span>&Or;</span></b></p>
+          <details>
+            <summary>Tech Stack</summary>
+            <img src="Images/Icons/dotnet.webp" alt="Microsoft .Net icon" />
+            <img src="Images/Icons/csharp.webp" alt="C# icon" />
+            <img src="Images/Icons/mysql.webp" alt="MySQL icon" />
+          </details>
+          <details>
+            <summary>Skills Learnt</summary>
             <ul>
               <li>C#</li>
               <li>MySQL</li>
               <li>.NET (WinForms)</li>
               <li>Dektop Application Development</li>
             </ul>
-          </div>
+          </details>
+
           <div class="project-button-links">
             <a href="https://github.com/karthiksgujjar/SLS" class="linkButton" target="_blank">View Code</a>
             <a href="https://karthiksgujjar.github.io/SLS/" class="linkButton" target="_blank">Open Website</a>
@@ -133,29 +130,28 @@
 
         <div class="card">
           <img src="Images/PGMS.webp" alt="Paying Guest Management System desktop application's main form image" />
-          <p class="title">Paying Guest Management System</p>
+          <p class="projectTitle">Paying Guest Management System</p>
           <p>
             This application allows the PG managing department to manage
             guests. instead of physical ledgers, it computerizes the work
             and saves the productive time of the owner.
           </p>
-          <div class="tech-stack" onclick="displayTechStack(2)">
-            <p class="roll-down-on-click"><b>Tech Stack <span>&Or;</span></b></p>
-            <div class="stack">
-              <img src="Images/Icons/dotnet.webp" alt="Microsoft .Net icon" />
-              <img src="Images/Icons/csharp.webp" alt="C# icon" />
-              <img src="Images/Icons/mysql.webp" alt="MySQL icon" />
-            </div>
-          </div>
-          <div class="skills-learnt" onclick="displaySkillsLearnt(2)">
-            <p class="roll-down-on-click"><b>Skills Learnt <span>&Or;</span></b></p>
+          <details>
+            <summary>Tech Stack</summary>
+            <img src="Images/Icons/dotnet.webp" alt="Microsoft .Net icon" />
+            <img src="Images/Icons/csharp.webp" alt="C# icon" />
+            <img src="Images/Icons/mysql.webp" alt="MySQL icon" />
+          </details>
+
+          <details>
+            <summary>Skills Learnt</summary>
             <ul>
               <li>C#</li>
               <li>MySQL</li>
               <li>.NET (WinForms)</li>
               <li>Dektop Application Development</li>
             </ul>
-          </div>
+          </details>
           <div class="project-button-links">
             <a href="https://github.com/karthiksgujjar/PGMS" class="linkButton" target="_blank">View Code</a>
             <a href="https://karthiksgujjar.github.io/PGMS/" class="linkButton" target="_blank">Open Website</a>
@@ -175,47 +171,44 @@
         </div>
       </div>
 
-      </div>
     </section>
 
-    <div id="individual-other-projects-collection">
+    <div id="individual-other-projects-collection"></div>
 
     <div class="card individual-other-project">
-      <div style="text-align: right; font-size: larger; color: red;">
-        <span style="cursor: pointer;" onclick="displayOtherProjectModal(0)">X</span>
-      </div>
+        <p><span class="closeButton" onclick="displayOtherProjectModal(0)">&times;</span></p>
       <img src="Images/CPU-Scheduling-Demo.webp" alt="CPU Scheduling Demo Website's Homepage" />
-      <p class="title">CPU Scheduling Demo</p>
+      <p class="projectTitle">CPU Scheduling Demo</p>
       <p>
-        This is a side project developed with an intention to help my juniors better understand the differences between
-        various CPU Scheduling Algorithms in one go. The site includes 4 algorithms, they are: FCFS, SJF, RR and
+        This is a side project developed with an intention to help my juniors better understand the differences
+        between
+        various CPU Scheduling Algorithms in one go. The site includes 4 algorithms, they are: <abbr
+          title="First Come First Serve">FCFS</abbr>, <abbr title="Shortest Job First">SJF</abbr>, <abbr
+          title="Round Robin">RR</abbr> and
         Priority scheduling.
       </p>
-      <div class="tech-stack" onclick="displayTechStack(3)">
-        <p class="roll-down-on-click"><b>Tech Stack <span>&Or;</span></b></p>
-        <div class="stack">
-          <img src="Images/Icons/html5.webp" alt="HTML5 icon" />
-          <img src="Images/Icons/css3.webp" alt="CSS3 icon" />
-          <img src="Images/Icons/js.webp" alt="Javascript icon" />
-        </div>
-      </div>
-      <div class="skills-learnt" onclick="displaySkillsLearnt(3)">
-        <p class="roll-down-on-click"><b>Skills Learnt <span>&Or;</span></b></p>
+      <details>
+        <summary>Tech Stack</summary>
+        <img src="Images/Icons/html5.webp" alt="HTML5 icon" />
+        <img src="Images/Icons/css3.webp" alt="CSS3 icon" />
+        <img src="Images/Icons/js.webp" alt="Javascript icon" />
+      </details>
+      <details>
+        <summary>Skills Learnt</summary>
         <ul>
           <li>HTML5</li>
           <li>CSS3</li>
           <li>Javascript</li>
           <li>DOM Manipulation</li>
         </ul>
-      </div>
+      </details>
       <div class="project-button-links">
-        <a href="https://github.com/karthiksgujjar/CPU-Scheduling-Demo" class="linkButton" target="_blank">View Code</a>
+        <a href="https://github.com/karthiksgujjar/CPU-Scheduling-Demo" class="linkButton" target="_blank">View
+          Code</a>
         <a href="https://karthiksgujjar.github.io/CPU-Scheduling-Demo/" class="linkButton" target="_blank">Open
           Website</a>
       </div>
     </div>
-
-  </div>
 
     <footer id="contact">
       <p class="title">Contact Me</p>
