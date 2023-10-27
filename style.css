@@ -113,8 +113,8 @@ footer {
   font-size: medium;
 }
 
-.projectTitle{
-  font-size:x-large;
+.projectTitle {
+  font-size: x-large;
   font-weight: bold;
 }
 
@@ -187,6 +187,17 @@ details > ul {
   display: flex;
 }
 
+.line-clamp {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+}
+
+.line-clamp:hover{
+  -webkit-line-clamp:unset;
+}
+
 .tile {
   display: flex;
   flex-direction: column;
@@ -208,7 +219,7 @@ details > ul {
   background-color: rgba(0, 0, 0, 0.3);
 }
 
-#individual-other-projects-collection.active{
+#individual-other-projects-collection.active {
   display: block;
 }
 
@@ -225,10 +236,10 @@ details > ul {
   transform: translate(-50%);
 }
 
-.closeButton{
-  cursor: pointer; 
-  float: right;  
-  font-size:x-large; 
+.closeButton {
+  cursor: pointer;
+  float: right;
+  font-size: x-large;
   color: red;
 }
 

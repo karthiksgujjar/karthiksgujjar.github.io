@@ -48,7 +48,7 @@ document.addEventListener("scroll", () => {
     navList.classList.remove("active");
   }
 
-  if (contactSection.getBoundingClientRect().y < 700) {
+  if (contactSection.getBoundingClientRect().y < 600) {
     propertiesNeutralizer();
 
     const element = navList.children[3];
@@ -62,19 +62,6 @@ document.addEventListener("scroll", () => {
 });
 
 function propertiesNeutralizer() {
-  /* headerTag.lastElementChild.children[0].style.backgroundColor='transparent';
-     headerTag.lastElementChild.children[0].style.color='white';
- 
-     headerTag.lastElementChild.children[1].style.backgroundColor='transparent';
-     headerTag.lastElementChild.children[1].style.color='white';
- 
-     headerTag.lastElementChild.children[2].style.backgroundColor='transparent';
-     headerTag.lastElementChild.children[2].style.color='white';
- 
-     headerTag.lastElementChild.children[3].style.backgroundColor='transparent';
-     headerTag.lastElementChild.children[3].style.color='white';*/
-
-  // Above code can also be written using the following loop
 
   Array.from([...navList.children]).forEach((element) => {
     element.style.color = "white";
@@ -131,6 +118,7 @@ otherProjectModal.style.top = headerTag.offsetTop + 100 + "px";
 otherProjectModal.classList.toggle('active');
 
 individualOtherProjectCollection = document.getElementById('individual-other-projects-collection');
+individualOtherProjectCollection.style.zIndex = "2";
 individualOtherProjectCollection.classList.toggle('active');
 }
 
@@ -138,7 +126,6 @@ window.onclick = function (event) {
   console.log(event.target)
   if(event.target == individualOtherProjectCollection){
     otherProjectModal.classList.toggle('active');
-individualOtherProjectCollection.classList.toggle('active');
-
+    individualOtherProjectCollection.classList.toggle('active');
   }
 }
