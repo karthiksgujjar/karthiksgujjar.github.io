@@ -122,6 +122,7 @@ footer {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+  align-items: center; /*If not given default will be strech and make other elements to strech when the particular card is streched for showing the contents description when hovered.*/
   margin-top: 1em;
   gap: 2em;
 }
