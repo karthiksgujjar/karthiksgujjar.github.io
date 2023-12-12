@@ -1,0 +1,17 @@
+{
+  "name": "tailwindcss-files",
+  "version": "1.0.0",
+  "description": "Karthik's Portfolio Website",
+  "main": "index.js",
+  "scripts": {
+    "tailwind": "npx tailwindcss -i ./input.css -o ../style.css --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^10.4.16",
+    "postcss": "^8.4.32",
+    "tailwindcss": "^3.3.6"
+  }
+}

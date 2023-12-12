@@ -1,241 +1,204 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Karthik's Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
-  <script src="script.js" defer></script>
-  <link rel="apple-touch-icon" sizes="180x180" href="Images/favicon/apple-touch-icon.png" />
-  <link rel="icon" type="image/png" sizes="32x32" href="Images/favicon/favicon-32x32.png" />
-  <link rel="icon" type="image/png" sizes="16x16" href="Images/favicon/favicon-16x16.png" />
-  <link rel="manifest" href="Images/favicon/site.webmanifest" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Karthik's Portfolio | Home</title>
+    <link rel="stylesheet" href="/style.css" />
+    <script src="/script.js" defer></script>
+    <link rel="apple-touch-icon" sizes="180x180" href="/Images/favicon/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/Images/favicon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/Images/favicon/favicon-16x16.png" />
+    <link rel="manifest" href="/Images/favicon/site.webmanifest" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rethink+Sans&display=swap" rel="stylesheet">
+
 </head>
 
-<body>
-
-  <div id="individual-other-projects-collection"></div>
-
-  <header>
-    <logo>
-      <a href="#"><img style="height: 57px; margin-left: 1em; margin-top: 0.2em" src="Images/Logo/Khz Emblem NoBG.webp"
-          alt="Khz Emblem" /></a>
-    </logo>
-
-    <button id="navLinksSelectOption" onclick="navLinksDisplay();">
-      Home <span>&Or;</span>
-    </button>
-
-    <nav id="navLinks">
-      <a href="#intro" onclick="navLinksDisplay();">Home</a>
-      <a href="#about" onclick="navLinksDisplay();">About</a>
-      <a href="#projects" onclick="navLinksDisplay();">Projects</a>
-      <a href="#contact" onclick="navLinksDisplay();">Contact</a>
-    </nav>
-  </header>
-
-  <main>
-    <section id="intro">
-      <img style="max-width: 100%" src="Images/Karthik S Image NoBG.webp" alt="Karthik S Image" />
-      <div id="text-intro">
-        <p class="title">Karthik S</p>
-        <p class="description">
-          A passionate, aspiring Software Developer from
-          <a href="https://goo.gl/maps/j18oxq64GZDvTGHC8" target="_blank" class="link-underline">Karnataka, India.</a>
+<body class="font-rethinkSansx bg-[#181A1B] text-white">
+    <header>
+        <p class="text-right mr-5  mt-5">
+            <a href="#works"
+                class="bg-black p-2 text-lg font-extrabold rounded-lg drop-shadow-[0_20px_50px_rgba(8,_112,_184,_0.7)]">Works</a>
         </p>
-        <div id="links">
-          <a class="linkButton" href="Resume/Karthik S Resume Final.pdf" download="Karthik S Resume">Download Resume</a>
-          <a href="https://github.com/karthiksgujjar" target="_blank"><img src="Images/Logo/github.webp"
-              alt="GitHub Logo" /></a>
-          <a href="http://linkedin.com/in/karthiksgujjar" target="_blank"><img src="Images/Logo/linkedin.webp"
-              alt="LinkedIn Logo" /></a>
-        </div>
-      </div>
-    </section>
+    </header>
 
-    <section id="about">
-      <p class="title">About Me</p>
-      <div id="about-description">
-        <img style="max-width: 100%" src="Images/About Me Section.webp" alt="Motivation Image1" />
-        <p class="descriptionLenghty">
-          Recent BCA graduate and an aspiring candidate who tried various
-          domains, learned basic skills. Having realized that,
-          <q><i>domain interest varies with time but zeal to learn and grow
-              remains constant</i></q>, now trying to conquer Web development alongside seeking an entry
-          level programmer or developer role to harness my technical skills,
-          up skill knowledge plus hoping to be a tech genius in the industry
-          one day.
-        </p>
-      </div>
-    </section>
+    <main>
+        <section id="intro" class="sm:h-[100dvh] flex items-center flex-wrap sm:flex-nowrap">
+            <section id="intro-card"
+                class="shadow-[-10px_-10px_30px_4px_rgba(0,0,0,0.1),_10px_10px_30px_4px_rgba(45,78,255,0.15)] p-5 m-5 rounded-lg">
+                <img src="/Images/Karthik S DP.webp" alt="Karthik S Profile Picture"
+                    class="drop-shadow-[0_20px_50px_rgba(8,_112,_184,_0.7)] mb-10">
+                <h1 class="text-5xl sm:text-4xl font-bold">Karthik S</h1>
+                <p class="text-lg">A passionate Software Developer</p>
+                <a href="mailto:karthiksgujjar@gmail.com"
+                    class="underline underline-offset-4 text-blue-700">karthiksgujjar@gmail.com</a>
+                <div class="mt-4 mb-4 flex justify-around">
+                    <a href="https://github.com/karthiksgujjar" target="_blank"><img src="/Images/Logo/github.webp"
+                            alt="GitHub Logo" /></a>
+                    <a href="http://linkedin.com/in/karthiksgujjar" target="_blank"><img
+                            src="/Images/Logo/linkedin.webp" alt="LinkedIn Logo" /></a>
+                    <a href="https://t.me/karthiksgujjar" target="_blank"><img src="/Images/Logo/telegram.webp"
+                            alt="Telegram Logo" /></a>
+                </div>
+                <a href="/Resume/Karthik S Resume Final.pdf" download="Karthik S Resume"
+                    class="block text-center bg-black p-2 text-lg rounded-md">Resume</a>
+            </section>
+            <section id="about-me"
+                class="shadow-[-10px_-10px_30px_4px_rgba(0,0,0,0.1),_10px_10px_30px_4px_rgba(45,78,255,0.15)] p-5 m-5 rounded-lg">
+                <h1 class="text-4xl sm:text-5xl">About Me</h1>
+                <div class="text-lg sm:text-xl">
 
-    <section id="projects">
-      <p class="title">Projects</p>
-      <div id="projects-collection">
+                    <p class="mt-2 mb-4">
+                        I recently graduated with a Bachelor of Computer Applications and undertook an enriching
+                        internship
+                        at KodNest, where I delved into Java full-stack web development.</p>
+                    <p class="mb-4">
+                        Learning Java as a backend language along with frameworks such as SpringBoot and Hibernate for
+                        web
+                        development, as well as frontend technologies such as HTML, CSS, JavaScript and ReactJS.</p>
+                    <p>
+                        I am eager to bring my technical skills and collaborative spirit to a dynamic development team.
+                        Excited about the journey ahead!
+                    </p>
+                </div>
+            </section>
+        </section>
 
-        <div class="card">
-          <img src="Images/SolarSystem.webp" alt="Solar System Image from the website" />
-          <p class="projectTitle">Solar System</p>
-          <p class="line-clamp">
-            A static website showcasing our “SOLAR SYSTEM” in the Milky Way
-            Galaxy. After eliminating redundant data which are hard to go
-            through, we are providing small yet powerful website which can be used for viewing overall data of the
-            planets.
-          </p>
-          <details>
-            <summary>Tech Stack</summary>
-            <img src="Images/Icons/html5.webp" alt="HTML5 icon" />
-            <img src="Images/Icons/css3.webp" alt="CSS3 icon" />
-          </details>
-          <details>
-            <summary>Skills Learnt</summary>
-            <ul>
-              <li>HTML5</li>
-              <li>CSS3</li>
-              <li>Website Layout Designing</li>
-            </ul>
-          </details>
-          <div class="project-button-links">
-            <a href="https://github.com/karthiksgujjar/SolarSystem" class="linkButton" target="_blank">View Code</a>
-            <a href="https://karthiksgujjar.github.io/SolarSystem" class="linkButton" target="_blank">Open Website</a>
-          </div>
-        </div>
+        <section id="works">
+            <p class="text-3xl sm:text-5xl font-bold ml-5 mt-10">My Latest Works</p>
+            <section class="md:h-[80dvh] grid sm:grid-cols-3 items-center">
+                <div
+                    class="shadow-[-10px_-10px_30px_4px_rgba(0,0,0,0.1),_10px_10px_30px_4px_rgba(45,78,255,0.15)] p-5 m-5 rounded-lg flex flex-col gap-3 ">
+                    <img src="/Images/SolarSystem.webp" alt="Solar System Image from the website" class="rounded-md" />
+                    <p class="text-2xl font-bold">Solar System</p>
+                    <details class="cursor-pointer">
+                        <summary class="font-bold">Description</summary>
+                        <p class="ml-4">
+                            A static website showcasing our “SOLAR SYSTEM” in the Milky Way
+                            Galaxy. After eliminating redundant data which are hard to go
+                            through, we are providing small yet powerful website which can be used for viewing overall
+                            data
+                            of the
+                            planets.
+                        </p>
+                    </details>
+                    <details class="cursor-pointer">
+                        <summary class="font-bold">Tech Stack</summary>
+                        <img src="/Images/Icons/html5.webp" class="inline ml-4 mt-2" alt="HTML5 icon" />
+                        <img src="/Images/Icons/css3.webp" class="inline ml-4 mt-2" alt="CSS3 icon" />
+                    </details>
+                    <details class="cursor-pointer">
+                        <summary class="font-bold">Skills Learnt</summary>
+                        <ul class="list-disc ml-4">
+                            <li class="list-inside">HTML5</li>
+                            <li class="list-inside">CSS3</li>
+                            <li class="list-inside">Website Layout Designing</li>
+                        </ul>
+                    </details>
+                    <div class="flex flex-wrap justify-around gap-4">
+                        <a href="https://github.com/karthiksgujjar/SolarSystem"
+                            class="bg-black  rounded-md p-1 font-bold" target="_blank">View
+                            Code</a>
+                        <a href="https://karthiksgujjar.github.io/SolarSystem"
+                            class="bg-black  rounded-md p-1 font-bold" target="_blank">Open
+                            Website</a>
+                    </div>
+                </div>
 
-        <div class="card">
-          <img src="Images/SLS.webp" alt="Simple Library Surfer desktop application's main form image" />
-          <p class="projectTitle">Simple Library Surfer</p>
-          <p class="line-clamp">
-            This mini project is not Library Management System in itself,
-            rather it displays details of the books in the library such as Name, Author and ID of the Book.
-          </p>
-          <details>
-            <summary>Tech Stack</summary>
-            <img src="Images/Icons/dotnet.webp" alt="Microsoft .Net icon" />
-            <img src="Images/Icons/csharp.webp" alt="C# icon" />
-            <img src="Images/Icons/mysql.webp" alt="MySQL icon" />
-          </details>
-          <details>
-            <summary>Skills Learnt</summary>
-            <ul>
-              <li>C#</li>
-              <li>MySQL</li>
-              <li>.NET (WinForms)</li>
-              <li>Dektop Application Development</li>
-            </ul>
-          </details>
+                <div
+                    class="shadow-[-10px_-10px_30px_4px_rgba(0,0,0,0.1),_10px_10px_30px_4px_rgba(45,78,255,0.15)] p-5 m-5 rounded-lg flex flex-col gap-3">
+                    <img src="/Images/SLS.webp" alt="Simple Library Surfer desktop application's main form image"
+                        class="rounded-md" />
+                    <p class="text-2xl font-bold">Simple Library Surfer</p>
+                    <details class="cursor-pointer">
+                        <summary class="font-bold">Description</summary>
+                        <p class="ml-4">
+                            Created a robust .NET WinForms CRUD application for library management, enabling librarians
+                            to
+                            efficiently handle book data, including insertion, deletion (including bulk delete),
+                            updating, and
+                            viewing. Implemented PDF report generation and advanced book search functionality.
+                        </p>
+                    </details>
+                    <details class="cursor-pointer">
+                        <summary class="font-bold">Tech Stack</summary>
+                        <img src="/Images/Icons/dotnet.webp" alt="Microsoft .Net icon" class="inline ml-4 mt-2" />
+                        <img src="/Images/Icons/csharp.webp" alt="C# icon" class="inline ml-4 mt-2" />
+                        <img src="/Images/Icons/mysql.webp" alt="MySQL icon" class="inline ml-4 mt-2" />
+                    </details>
+                    <details class="cursor-pointer">
+                        <summary class="font-bold">Skills Learnt</summary>
+                        <ul class="list-disc ml-4">
+                            <li class="list-inside">C#</li>
+                            <li class="list-inside">MySQL</li>
+                            <li class="list-inside">.NET (WinForms)</li>
+                            <li class="list-inside">Dektop Application Development</li>
+                        </ul>
+                    </details>
+                    <div class="flex flex-wrap justify-around gap-4">
+                        <a href="https://github.com/karthiksgujjar/SLS" class="bg-black  rounded-md p-1 font-bold"
+                            target="_blank">View
+                            Code</a>
+                        <a href="https://karthiksgujjar.github.io/SLS/" class="bg-black  rounded-md p-1 font-bold"
+                            target="_blank">Open
+                            Website</a>
+                    </div>
+                </div>
 
-          <div class="project-button-links">
-            <a href="https://github.com/karthiksgujjar/SLS" class="linkButton" target="_blank">View Code</a>
-            <a href="https://karthiksgujjar.github.io/SLS/" class="linkButton" target="_blank">Open Website</a>
-          </div>
-        </div>
+                <div
+                    class="shadow-[-10px_-10px_30px_4px_rgba(0,0,0,0.1),_10px_10px_30px_4px_rgba(45,78,255,0.15)] p-5 m-5 rounded-lg flex flex-col gap-3">
+                    <img src="/Images/PGMS.webp" alt="Solar System Image from the website" class="rounded-md" />
+                    <p class="text-2xl font-bold">Paying Guest Management System</p>
+                    <details class="cursor-pointer">
+                        <summary class="font-bold">Description</summary>
+                        <p class="ml-4">
+                            A user-friendly Paying Guests Management software for PG
+                            building owners developed using .NET with C# (WinForms).
+                            Streamlined guest and building management, replacing manual
+                            processes.
+                            Featured staff management, guest admission/removal, fee
+                            collection, visitor tracking, and reporting.
+                        </p>
+                    </details>
+                    <details class="cursor-pointer">
+                        <summary class="font-bold">Tech Stack</summary>
+                        <img src="/Images/Icons/dotnet.webp" class="inline ml-4 mt-2" alt="Microsoft .Net icon" />
+                        <img src="/Images/Icons/csharp.webp" class="inline ml-4 mt-2" alt="C# icon" />
+                        <img src="/Images/Icons/mysql.webp" class="inline ml-4 mt-2" alt="MySQL icon" />
+                    </details>
+                    <details class="cursor-pointer">
+                        <summary class="font-bold">Skills Learnt</summary>
+                        <ul class="list-disc ml-4">
+                            <li class="list-inside">C#</li>
+                            <li class="list-inside">MySQL</li>
+                            <li class="list-inside">.NET (WinForms)</li>
+                            <li class="list-inside">Dektop Application Development</li>
+                        </ul>
+                    </details>
+                    <div class="flex flex-wrap justify-around gap-4">
+                        <a href="https://github.com/karthiksgujjar/PGMS" class="bg-black  rounded-md p-1 font-bold"
+                            target="_blank">View
+                            Code</a>
+                        <a href="https://karthiksgujjar.github.io/PGMS/" class="bg-black  rounded-md p-1 font-bold"
+                            target="_blank">Open
+                            Website</a>
+                    </div>
+                </div>
+            </section>
 
-        <div class="card">
-          <img src="Images/PGMS.webp" alt="Paying Guest Management System desktop application's main form image" />
-          <p class="projectTitle" style="font-size: large;">Paying Guest Management System</p>
-          <p class="line-clamp">
-            This application allows the PG managing department to manage
-            guests. instead of physical ledgers, it computerizes the work
-            and saves the productive time of the owner.
-          </p>
-          <details>
-            <summary>Tech Stack</summary>
-            <img src="Images/Icons/dotnet.webp" alt="Microsoft .Net icon" />
-            <img src="Images/Icons/csharp.webp" alt="C# icon" />
-            <img src="Images/Icons/mysql.webp" alt="MySQL icon" />
-          </details>
+        </section>
 
-          <details>
-            <summary>Skills Learnt</summary>
-            <ul>
-              <li>C#</li>
-              <li>MySQL</li>
-              <li>.NET (WinForms)</li>
-              <li>Dektop Application Development</li>
-            </ul>
-          </details>
-          <div class="project-button-links">
-            <a href="https://github.com/karthiksgujjar/PGMS" class="linkButton" target="_blank">View Code</a>
-            <a href="https://karthiksgujjar.github.io/PGMS/" class="linkButton" target="_blank">Open Website</a>
-          </div>
-        </div>
-
-      </div>
-
-      <div id="other-projects">
-        <p class="roll-down-on-click" onclick="displayOtherProjects()"><b>My Other Projects <span>&Or;</span></b></p>
-        <div id="other-projects-collection-tiles">
-          <div class="tile">
-            <p><b>CPU Sheduling Demo</b></p>
-            <img src="Images/CPU-Scheduling-Demo.webp" alt="CPU Scheduling Demo Website's Homepage"
-              onclick="displayOtherProjectModal(0)" />
-          </div>
-
-          
-        </div>
-      </div>
-
-    </section>
-
-
-    <div class="card individual-other-project">
-        <p><span class="closeButton" onclick="displayOtherProjectModal(0)">&times;</span></p>
-      <img src="Images/CPU-Scheduling-Demo.webp" alt="CPU Scheduling Demo Website's Homepage" />
-      <p class="projectTitle">CPU Scheduling Demo</p>
-      <p class="line-clamp">
-        This is a side project developed with an intention to help my juniors better understand the differences
-        between
-        various CPU Scheduling Algorithms in one go. The site includes 4 algorithms, they are: <abbr
-          title="First Come First Serve">FCFS</abbr>, <abbr title="Shortest Job First">SJF</abbr>, <abbr
-          title="Round Robin">RR</abbr> and
-        Priority scheduling.
-      </p>
-      <details>
-        <summary>Tech Stack</summary>
-        <img src="Images/Icons/html5.webp" alt="HTML5 icon" />
-        <img src="Images/Icons/css3.webp" alt="CSS3 icon" />
-        <img src="Images/Icons/js.webp" alt="Javascript icon" />
-      </details>
-      <details>
-        <summary>Skills Learnt</summary>
-        <ul>
-          <li>HTML5</li>
-          <li>CSS3</li>
-          <li>Javascript</li>
-          <li>DOM Manipulation</li>
-        </ul>
-      </details>
-      <div class="project-button-links">
-        <a href="https://github.com/karthiksgujjar/CPU-Scheduling-Demo" class="linkButton" target="_blank">View
-          Code</a>
-        <a href="https://karthiksgujjar.github.io/CPU-Scheduling-Demo/" class="linkButton" target="_blank">Open
-          Website</a>
-      </div>
-    </div>
-  </main>
-
-  <footer id="contact">
-    <p class="title">Contact Me</p>
-    <div id="contact-content">
-      <div id="contact-links">
-        <div id="mail">
-          <img src="Images//Icons/mailme.webp" alt="eMail icon" />
-          <a class="link-underline" target="_blank"
-            href="mailto:karthiksgujjar@gmail.com?subject=Contacting through mail ID provided in your Portfolio website.">karthiksgujjar@gmail.com</a>
-        </div>
-        <div id="phone">
-          <img src="Images/Icons/callme.webp" alt="callme icon" />
-          <a class="link-underline" target="_blank" href="tel:+917676331323">+91 7676331323</a>
-        </div>
-        <div id="whatsapp">
-          <img src="Images/Icons/whatsapp.webp" alt="whatsapp icon" />
-          <a class="link-underline" target="_blank" href="https://wa.me/917676331323">+91 7676331323</a>
-        </div>
-      </div>
-    </div>
-  </footer>
-
+        <a href="./allWorks.html">
+            <p
+                class="shadow-[-10px_-10px_30px_4px_rgba(0,0,0,0.1),_10px_10px_30px_4px_rgba(45,78,255,0.15)] p-2 m-5 rounded-lg sm:h-3/4 text-center font-bold text-lg">
+                >>>>> ALL WORKS >>>>>
+            </p>
+        </a>
+    </main>
 </body>
 
 </html>
