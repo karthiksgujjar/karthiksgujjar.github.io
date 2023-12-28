@@ -560,8 +560,16 @@ video {
   margin-left: 1rem;
 }
 
+.ml-5 {
+  margin-left: 1.25rem;
+}
+
 .mr-5 {
   margin-right: 1.25rem;
+}
+
+.mt-10 {
+  margin-top: 2.5rem;
 }
 
 .mt-2 {
@@ -576,12 +584,36 @@ video {
   margin-top: 1.25rem;
 }
 
-.mt-10 {
-  margin-top: 2.5rem;
+.mb-1 {
+  margin-bottom: 0.25rem;
 }
 
-.ml-5 {
-  margin-left: 1.25rem;
+.mb-16 {
+  margin-bottom: 4rem;
+}
+
+.mt-16 {
+  margin-top: 4rem;
+}
+
+.mt-32 {
+  margin-top: 8rem;
+}
+
+.mt-36 {
+  margin-top: 9rem;
+}
+
+.mb-36 {
+  margin-bottom: 9rem;
+}
+
+.mb-3 {
+  margin-bottom: 0.75rem;
+}
+
+.mb-32 {
+  margin-bottom: 8rem;
 }
 
 .block {
@@ -600,6 +632,10 @@ video {
   display: grid;
 }
 
+.h-\[80dvh\] {
+  height: 80dvh;
+}
+
 .cursor-pointer {
   cursor: pointer;
 }
@@ -610,10 +646,6 @@ video {
 
 .list-disc {
   list-style-type: disc;
-}
-
-.auto-cols-auto {
-  grid-auto-columns: auto;
 }
 
 .flex-col {
@@ -687,21 +719,6 @@ video {
   line-height: 2rem;
 }
 
-.text-5xl {
-  font-size: 3rem;
-  line-height: 1;
-}
-
-.text-lg {
-  font-size: 1.125rem;
-  line-height: 1.75rem;
-}
-
-.text-xl {
-  font-size: 1.25rem;
-  line-height: 1.75rem;
-}
-
 .text-3xl {
   font-size: 1.875rem;
   line-height: 2.25rem;
@@ -710,6 +727,16 @@ video {
 .text-4xl {
   font-size: 2.25rem;
   line-height: 2.5rem;
+}
+
+.text-5xl {
+  font-size: 3rem;
+  line-height: 1;
+}
+
+.text-lg {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
 }
 
 .font-bold {
@@ -758,18 +785,6 @@ video {
     height: 100dvh;
   }
 
-  .sm\:h-\[60dvh\] {
-    height: 60dvh;
-  }
-
-  .sm\:h-\[40dvh\] {
-    height: 40dvh;
-  }
-
-  .sm\:h-\[70dvh\] {
-    height: 70dvh;
-  }
-
   .sm\:grid-cols-3 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
@@ -795,44 +810,30 @@ video {
 }
 
 @media (min-width: 768px) {
-  @media (min-width: 640px) {
-    .md\:sm\:h-\[100dvh\] {
-      height: 100dvh;
-    }
-  }
-
-  .md\:h-\[\] {
-    height: ;
+  .md\:h-\[80dvh\] {
+    height: 80dvh;
   }
 
   .md\:h-\[90dvh\] {
     height: 90dvh;
   }
-
-  .md\:h-\[60dvh\] {
-    height: 60dvh;
-  }
-
-  .md\:h-\[80dvh\] {
-    height: 80dvh;
-  }
-
-  .md\:h-\[60\] {
-    height: 60;
-  }
 }
 
 @media (min-width: 1024px) {
+  .lg\:h-screen {
+    height: 100vh;
+  }
+
+  .lg\:h-\[\] {
+    height: ;
+  }
+
+  .lg\:h-\[90\] {
+    height: 90;
+  }
+
   .lg\:h-\[90dvh\] {
     height: 90dvh;
-  }
-
-  .lg\:h-\[80dvh\] {
-    height: 80dvh;
-  }
-
-  .lg\:h-\[100dvh\] {
-    height: 100dvh;
   }
 }
 
