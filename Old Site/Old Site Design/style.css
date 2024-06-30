@@ -1,0 +1,306 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto Slab", Georgia, "Times New Roman", serif;
+  scroll-behavior: smooth;
+  /* font-size: 1rem; */
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1;
+  position: sticky;
+  top: 0;
+  border-radius: 0 0 1em 1em;
+}
+
+#navLinks {
+  margin-right: 1em;
+}
+
+#navLinks a {
+  font-size: large;
+  padding: 0.15em;
+  margin-right: 0.5em;
+  border-radius: 0.5em;
+}
+
+#navLinksSelectOption {
+  display: none;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  width: fit-content;
+  font-size: large;
+  padding: 0 0.5em;
+  border-radius: 0.5em;
+  margin-right: 2em;
+  background-color: white;
+  box-shadow: 0 0 0.8em white;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  row-gap: 5em;
+}
+
+section,
+footer {
+  height: fit-content;
+  margin-left: 1em;
+  margin-right: 1em;
+  padding-top: 6em;
+}
+
+#intro {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.title {
+  font-size: xx-large;
+  font-weight: bolder;
+}
+
+.description {
+  color: #343434;
+}
+
+.link-underline {
+  text-decoration: underline;
+}
+
+#links {
+  display: flex;
+  align-items: center;
+}
+
+#links > a {
+  margin-top: 1.5em;
+  margin-right: 1.5em;
+}
+
+.linkButton {
+  outline: none;
+  border: none;
+  background-color: black;
+  color: white;
+  border-radius: 0.5em;
+  padding: 0.35em;
+}
+
+#about-description {
+  display: flex;
+  column-gap: 2em;
+  margin-top: 1em;
+}
+
+.descriptionLenghty {
+  text-align: justify;
+  font-size: medium;
+}
+
+.projectTitle {
+  font-size: x-large;
+  font-weight: bold;
+}
+
+#projects-collection {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center; /*If not given default will be strech and make other elements to strech when the particular card is streched for showing the contents description when hovered.*/
+  margin-top: 1em;
+  gap: 2em;
+}
+
+.card {
+  display: flex;
+  flex-flow: column wrap;
+  box-shadow: 0 0 10px black;
+  border-radius: 1em;
+  padding: 0.5em;
+  gap: 0.5em;
+  width: min-content;
+}
+
+.card > img {
+  max-width: 300px;
+  border-radius: 0.5em;
+  margin: 0.5em;
+  align-self: center;
+}
+
+details > summary {
+  font-weight: bold;
+  cursor: pointer;
+  margin: 0.3em 0;
+}
+
+details > ul {
+  list-style-position: inside;
+}
+
+.project-button-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+}
+
+.roll-down-on-click {
+  cursor: pointer;
+  box-shadow: 0 0 10px black;
+  padding: 0.3em;
+  border-radius: 0.7em;
+  text-align: center;
+  margin: 0 3em;
+}
+
+#other-projects {
+  margin: 2em 0;
+}
+
+#other-projects-collection-tiles {
+  display: none;
+  flex-wrap: wrap;
+  box-shadow: 0 0 3px black;
+  border-radius: 1em;
+  padding: 0.5em;
+  gap: 0.5em;
+  margin: 1em 3em;
+  justify-content: center;
+}
+
+#other-projects-collection-tiles.active {
+  display: flex;
+}
+
+.line-clamp {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+}
+
+.line-clamp:hover{
+  -webkit-line-clamp:unset;
+}
+
+.tile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tile > img {
+  width: 200px;
+  border-radius: 0.5em;
+  margin: 0.5em;
+  cursor: pointer;
+}
+
+#individual-other-projects-collection {
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+#individual-other-projects-collection.active {
+  display: block;
+}
+
+.individual-other-project {
+  display: none;
+}
+
+.individual-other-project.active {
+  display: flex;
+  position: absolute;
+  z-index: 10;
+  background-color: white;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.closeButton {
+  cursor: pointer;
+  float: right;
+  font-size: x-large;
+  color: red;
+}
+
+#contact-links {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#contact-content {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+#mail,
+#phone,
+#whatsapp {
+  display: flex;
+  align-items: center;
+  padding: 1em;
+}
+
+#contact-links img {
+  margin-right: 0.5em;
+}
+
+@media (max-width: 900px) {
+  #intro {
+    align-items: flex-start;
+  }
+
+  #about-description {
+    flex-wrap: wrap;
+  }
+
+  .card {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 500px) {
+  #navLinks {
+    display: none;
+  }
+
+  #navLinks.active {
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    right: 0.6em;
+    top: 4em;
+    width: max-content;
+    background-color: black;
+    padding: 0.5em;
+    border-radius: 1em;
+  }
+
+  #navLinksSelectOption {
+    display: block;
+  }
+}
