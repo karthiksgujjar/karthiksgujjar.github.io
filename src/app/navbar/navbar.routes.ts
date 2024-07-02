@@ -1,9 +1,10 @@
 import { Routes } from '@angular/router';
+import { NavbarComponent } from './navbar.component';
 
 export const routes: Routes = [
     {
         path:"",
-        loadChildren: () => import('./navbar/navbar.routes').then(m => m.routes),
+        component: NavbarComponent,
         pathMatch: 'full',
     }
 ];
