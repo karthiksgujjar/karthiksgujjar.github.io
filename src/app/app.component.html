@@ -1,3 +1,10 @@
-<div class="d-flex align-items-center h-100">
-    <router-outlet></router-outlet>
+<div class="d-flex justify-content-end position-sticky top-0 z-3 p-2">
+    <fa-icon [icon]="languageSwitchIcon" size="2x" class="icon-style"></fa-icon>
+    &nbsp; &nbsp; &nbsp;
+    <span (click)="themeSwitcher()">
+        <fa-icon [icon]="themeIcon" size="2x"></fa-icon>
+    </span>
 </div>
+
+<app-navbar class="vertical-center z-3" />
+<router-outlet />
