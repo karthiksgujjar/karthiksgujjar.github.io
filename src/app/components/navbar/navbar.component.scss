@@ -1,11 +1,11 @@
-::ng-deep .icon-style:hover svg path {
-    fill: #0ca0e1;
-}
+.nav-icons {
+    cursor: pointer;
+    
+    *:hover {
+        color: #0ca0e1;
+    }
 
-::ng-deep .dark-mode svg path {
-    fill: #FFFFFF;
-}
-
-::ng-deep .active svg path {
-    fill: #0ca0e1;
+    .active{
+        color: #0ca0e1;
+    }
 }

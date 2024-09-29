@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { effect, Injectable, signal } from '@angular/core';
 import { NavbarComponent } from '../components/navbar/navbar.component';
 
 @Injectable({
@@ -6,29 +6,21 @@ import { NavbarComponent } from '../components/navbar/navbar.component';
 })
 export class ThemeConfigService {
 
-  private currentTheme!: string;
+  currentTheme = signal(localStorage.getItem('preferred-theme') ?? "dark");
 
-  constructor() { }
-
-  
-  public getCurrentThemeMode() : string {
-    return this.currentTheme;
-  }
-  
-  
-  public setCurrentThemeMode(themeMode : string) {
-    this.currentTheme = themeMode;
-    if( themeMode === "dark"){
-      document.body.style.backgroundColor = "#0C090A";
-      document.body.style.color = "#FFFFFF";
-      NavbarComponent.prototype.iconsColorClass = "dark-mode";
-    }
-    else{
-      document.body.style.backgroundColor = "#FFFFFF";
-      document.body.style.color = "#000000";
-      NavbarComponent.prototype.iconsColorClass = "";
-
-    }
-  }
+  constructor() {
+    effect(() => {
+      if (this.currentTheme() === "dark") {
+        document.body.classList.add("dark");
+        document.body.classList.remove("light");
+        localStorage.setItem('preferred-theme', 'dark')
+      }
+      else {
+        document.body.classList.add("light");
+        document.body.classList.remove("dark");
+        localStorage.setItem('preferred-theme', 'light')
+      }
+    });
+   }
   
 }

@@ -1,23 +1,17 @@
-<nav class="p-2 border-end border-primary rounded-end mt-2" style="max-width: fit-content; ">
-    <button  type="button" class="navbar-brand btn border-0" routerLink="/" routerLinkActive="active">
+<nav class="border-end border-primary rounded-end mt-2" style="max-width: fit-content; ">
+    <button type="button" class="navbar-brand btn border-0" routerLink="/" routerLinkActive="active">
         <img src="assets/logos/KhzInsignia.webp" alt="Khz Insignia" width="39" height="39">
     </button>
     <hr class="text-secondary" />
     <div class="text-center">
-        <p class="my-5">
-            <button routerLink="intro" type="button" class="btn border-0" routerLinkActive="active" title="Who am I?">
-                <fa-icon [icon]="userIcon" size="2x" class="icon-style" [class]="iconsColorClass"></fa-icon>
-            </button>
+        <p class="nav-icons">
+            <i class="bi bi-person-fill fs-1" routerLink="intro" routerLinkActive="active" title="Who am I?"></i>
         </p>
-        <p class="my-5">
-            <button routerLink="skills" type="button" class="btn border-0" routerLinkActive="active" title="My Skills">
-                <fa-icon [icon]="skillsIcon" size="2x" class="icon-style" [class]="iconsColorClass"></fa-icon>
-            </button>
+        <p class="nav-icons my-5">
+            <i class="bi bi-code-slash fs-1" routerLink="skills" routerLinkActive="active" title="My Skills"></i>
         </p>
-        <p>
-            <button routerLink="projects" type="button" class="btn border-0" routerLinkActive="active" title="Projects">
-                <fa-icon [icon]="projectsIcon" size="2x" class="icon-style" [class]="iconsColorClass"></fa-icon>
-            </button>
+        <p class="nav-icons">
+            <i class="bi bi-laptop fs-1" routerLink="projects" routerLinkActive="active" title="Projects"></i>
         </p>
     </div>
 </nav>

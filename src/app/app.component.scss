@@ -1,0 +1,16 @@
+.vertical-center {
+    position: fixed;
+    margin: 0;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+span, i {
+    cursor: pointer;
+}
+
+span:hover {
+    transform: rotate(10deg);
+    transition: all 0.3s ease-in-out;
+}
