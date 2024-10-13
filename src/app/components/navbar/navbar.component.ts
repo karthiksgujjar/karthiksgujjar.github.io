@@ -15,6 +15,7 @@ export class NavbarComponent implements AfterViewInit {
 
   themeService: ThemeConfigService = inject(ThemeConfigService);
   @ViewChildren('navIcon') icons!: QueryList<ElementRef>;
+  
   constructor(private renderer: Renderer2, private router: Router) { }
 
   handleNavigationDisplay() {
