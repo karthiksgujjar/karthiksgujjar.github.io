@@ -1,0 +1,18 @@
+<div class="d-flex justify-content-between position-sticky top-0 z-3 p-2">
+    <app-navbar class="vertical-center z-3" />
+    <div>
+        <i class="bi bi-translate fs-3"></i>
+        &nbsp; &nbsp; &nbsp;
+        <span (click)="themeSwitcher()">
+            <i [ngClass]="themeService.currentTheme() === 'dark' ? 'bi-sun-fill' : 'bi-moon-stars-fill' "
+                class="bi fs-3"></i>
+        </span>
+    </div>
+</div>
+
+<router-outlet />
+
+<div class="position-fixed bottom-0 d-flex flex-column justify-content-end w-100 z-3 p-3">
+    <i class="bi bi-arrow-up-short fs-1 ms-auto bounce-up d-none text-primary icon-shadow" (click)="handlePageUpClick()" #pageUp></i>
+    <i class="bi bi-arrow-down-short fs-1 ms-auto bounce-down text-primary icon-shadow" (click)="handlePageDownClick()" #pageDown></i>
+</div>

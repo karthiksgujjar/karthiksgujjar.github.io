@@ -1,0 +1,51 @@
+span,
+i {
+    cursor: pointer;
+}
+
+span:hover {
+    transform: rotate(10deg);
+    transition: all 0.3s ease-in-out;
+}
+
+.icon-shadow {
+    text-shadow: 0 0 10px rgba(0, 123, 255, 1);
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+@keyframes bounceDown {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-2px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes bounceUp {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-2px);
+        /* Adjust the height of the bounce */
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.bounce-up {
+    animation: bounceUp 1s infinite;
+}
+
+.bounce-down {
+    animation: bounceDown 1s infinite;
+}
