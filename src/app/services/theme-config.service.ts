@@ -1,5 +1,4 @@
 import { effect, Injectable, signal } from '@angular/core';
-import { NavbarComponent } from '../components/navbar/navbar.component';
 
 @Injectable({
   providedIn: 'root'

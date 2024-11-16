@@ -1,8 +1,7 @@
 .nav-icons {
     cursor: pointer;
-    display: none;
     transition: transform 0.5s ease,
-    opacity 0.5s ease;
+        opacity 0.5s ease;
 
     *:hover {
         color: #0ca0e1;
@@ -10,49 +9,33 @@
 
     &.active {
         color: #0ca0e1;
-
-        i{
-            display: none;
-        }
-
-        span{
-            display: block;
-            font-weight: 600;
-            
-        }
     }
 
-    span{
-        display: none;
+    &.dark {
+        background-color: rgba(226, 243, 255, 0.8);
     }
+
+    &.light {
+        background-color: rgba(13, 16, 19, 0.8);
+    }
+}
+
+.nav-icon-1,
+.nav-icon-2,
+.nav-icon-3,
+.nav-icon-4 {
+    transform: translateX(-500%);
+    transition: 1.5s;
+    opacity: 0;
+}
+
+.nav-icon-1,
+.nav-icon-2,
+.nav-icon-3,
+.nav-icon-4 {
     &.show {
+        transform: translateX(0);
+        transition: 1s;
         opacity: 1;
-        display: block;
-        animation: rollDown 0.5s ease-in-out;
-    }
-}
-
-@keyframes rollDown {
-    0% {
-        opacity: 0;
-        transform: translateY(-20px);
-    }
-
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.nav-container {
-    &.semi-trans-bg-white {
-        background-color: rgba(255, 255, 255, 0.7);
-        /* White with 70% opacity */
-    }
-
-    &.semi-trans-bg-black {
-        background-color: rgba(0, 0, 0, 0.7);
-        /* White with 70% opacity */
-
     }
 }
