@@ -10,4 +10,6 @@
     </div>
 </div>
 
-<router-outlet />
+<div [@routeTransition]="route.snapshot.data" style="display: contents;">
+    <router-outlet />
+</div>

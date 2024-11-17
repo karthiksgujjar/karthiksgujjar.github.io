@@ -1,41 +1,56 @@
 {
-  "hash": "b7ce1863",
-  "configHash": "218a25d8",
+  "hash": "50393d83",
+  "configHash": "25f6dbaf",
   "lockfileHash": "f6a93166",
-  "browserHash": "33ad6eb7",
+  "browserHash": "a8673240",
   "optimized": {
     "@angular/common": {
       "src": "../../../../../node_modules/@angular/common/fesm2022/common.mjs",
       "file": "@angular_common.js",
-      "fileHash": "ee16252c",
+      "fileHash": "cfd9b84f",
       "needsInterop": false
     },
     "@angular/core": {
       "src": "../../../../../node_modules/@angular/core/fesm2022/core.mjs",
       "file": "@angular_core.js",
-      "fileHash": "c6f1e624",
+      "fileHash": "f67b2a55",
       "needsInterop": false
     },
     "@angular/platform-browser": {
       "src": "../../../../../node_modules/@angular/platform-browser/fesm2022/platform-browser.mjs",
       "file": "@angular_platform-browser.js",
-      "fileHash": "d9a78888",
+      "fileHash": "e5c22021",
       "needsInterop": false
     },
     "@angular/router": {
       "src": "../../../../../node_modules/@angular/router/fesm2022/router.mjs",
       "file": "@angular_router.js",
-      "fileHash": "cf31d2eb",
+      "fileHash": "49aff5ee",
       "needsInterop": false
     },
     "rxjs": {
       "src": "../../../../../node_modules/rxjs/dist/esm5/index.js",
       "file": "rxjs.js",
-      "fileHash": "4f799588",
+      "fileHash": "7f77e48f",
+      "needsInterop": false
+    },
+    "@angular/animations": {
+      "src": "../../../../../node_modules/@angular/animations/fesm2022/animations.mjs",
+      "file": "@angular_animations.js",
+      "fileHash": "09400861",
+      "needsInterop": false
+    },
+    "@angular/platform-browser/animations": {
+      "src": "../../../../../node_modules/@angular/platform-browser/fesm2022/animations.mjs",
+      "file": "@angular_platform-browser_animations.js",
+      "fileHash": "47aa36f7",
       "needsInterop": false
     }
   },
   "chunks": {
+    "chunk-RPJXXN5M": {
+      "file": "chunk-RPJXXN5M.js"
+    },
     "chunk-YIIPTTMP": {
       "file": "chunk-YIIPTTMP.js"
     },

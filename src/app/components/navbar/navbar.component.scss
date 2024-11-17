@@ -20,22 +20,26 @@
     }
 }
 
-.nav-icon-1,
-.nav-icon-2,
-.nav-icon-3,
-.nav-icon-4 {
+.nav-container {
+    top: 10%;
     transform: translateX(-500%);
     transition: 1s;
     opacity: 0;
-}
-
-.nav-icon-1,
-.nav-icon-2,
-.nav-icon-3,
-.nav-icon-4 {
     &.show {
-        transform: translateX(0);
+        transform: translateX(25%);
         transition: 0.5s;
         opacity: 1;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .nav-container {
+        top: 20%;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .nav-container {
+        top: 16%;
     }
 }
