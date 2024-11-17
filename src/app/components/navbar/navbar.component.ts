@@ -1,7 +1,7 @@
 import { AfterViewInit, Component, ElementRef, inject, QueryList, Renderer2, ViewChildren } from '@angular/core';
-import { RouterLink, RouterLinkActive } from '@angular/router';
+import { Router, RouterLink, RouterLinkActive } from '@angular/router';
 import { ThemeConfigService } from '../../services/theme-config.service';
-import { timer } from 'rxjs';
+import { interval, take, timer } from 'rxjs';
 
 @Component({
   selector: 'app-navbar',
@@ -15,7 +15,12 @@ export class NavbarComponent implements AfterViewInit {
   themeService: ThemeConfigService = inject(ThemeConfigService);
   @ViewChildren('navIcon') icons!: QueryList<ElementRef>;
 
-  constructor(private renderer: Renderer2) { }
+  constructor(private renderer: Renderer2, private router: Router) { }
+
+  ngAfterViewInit() {
+    timer(500).subscribe(() => this.handleNavigationDisplay());
+    interval(1500).pipe(take(4)).subscribe(routeId => this.showAllPages(routeId));
+  }
 
   handleNavigationDisplay() {
     this.icons.forEach((icon, index) => {
@@ -34,9 +39,30 @@ export class NavbarComponent implements AfterViewInit {
     });
   }
 
-  ngAfterViewInit() {
-    timer(2000).subscribe(() => this.handleNavigationDisplay());
-    timer(4000).subscribe(() => this.handleNavigationDisplay());
+  hideNavigationDisplay() {
+    timer(1000).subscribe(() => this.handleNavigationDisplay());
+  }
+
+  showAllPages(routeId: number) {
+
+    switch (routeId) {
+      case 0:
+        this.router.navigateByUrl("/intro");
+        break;
+      case 1:
+        this.router.navigateByUrl("/skills");
+        break;
+      case 2:
+        this.router.navigateByUrl("/projects");
+        break;
+      case 3:
+        this.router.navigateByUrl("/");
+        timer(500).subscribe(() => this.handleNavigationDisplay());
+        break;
+      default:
+        console.log("Invalid RouteID");
+        break;
+    }
   }
 
 }

@@ -3,16 +3,16 @@
         <img src="assets/logos/KhzInsignia.webp" alt="Khz Insignia" width="39" height="39">
     </button>
     <div class="position-absolute px-3 px-lg-2 nav-container rounded text-center">
-        <p class="nav-icons rounded-2 nav-icon-1" [routerLinkActiveOptions]="{ exact: true }" routerLink="/" routerLinkActive="active" title="Home" #navIcon>
+        <p class="nav-icons rounded-2 nav-icon-1" [routerLinkActiveOptions]="{ exact: true }" routerLink="/" routerLinkActive="active" title="Home" (click)="hideNavigationDisplay()" #navIcon>
             <i class="bi bi-house-door-fill fs-1"></i>
         </p> 
-        <p class="nav-icons my-5 rounded-2 nav-icon-2"routerLink="intro" routerLinkActive="active" title="Who am I?" #navIcon>
+        <p class="nav-icons my-5 rounded-2 nav-icon-2"routerLink="intro" routerLinkActive="active" title="Who am I?" (click)="hideNavigationDisplay()" #navIcon>
             <i class="bi bi-person-fill fs-1"></i>
         </p>
-        <p class="nav-icons my-5 rounded-2 nav-icon-3" routerLink="skills" routerLinkActive="active" title="My Skills" #navIcon>
+        <p class="nav-icons my-5 rounded-2 nav-icon-3" routerLink="skills" routerLinkActive="active" title="My Skills" (click)="hideNavigationDisplay()" #navIcon>
             <i class="bi bi-code-slash fs-1"></i>
         </p>
-        <p class="nav-icons rounded-2 nav-icon-4" routerLink="projects" routerLinkActive="active" title="Projects" #navIcon>
+        <p class="nav-icons rounded-2 nav-icon-4" routerLink="projects" routerLinkActive="active" title="Projects" (click)="hideNavigationDisplay()" #navIcon>
             <i class="bi bi-laptop fs-1"></i>
         </p>
     </div>

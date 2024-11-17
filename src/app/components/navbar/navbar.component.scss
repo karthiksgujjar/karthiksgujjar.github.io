@@ -25,7 +25,7 @@
 .nav-icon-3,
 .nav-icon-4 {
     transform: translateX(-500%);
-    transition: 1.5s;
+    transition: 1s;
     opacity: 0;
 }
 
@@ -35,7 +35,7 @@
 .nav-icon-4 {
     &.show {
         transform: translateX(0);
-        transition: 1s;
+        transition: 0.5s;
         opacity: 1;
     }
 }
