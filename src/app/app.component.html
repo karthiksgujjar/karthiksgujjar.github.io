@@ -1,7 +1,20 @@
 <div class="d-flex justify-content-between position-sticky top-0 z-3 p-2">
     <app-navbar class="vertical-center z-3" />
     <div>
-        <i class="bi bi-translate fs-3"></i>
+        <div class="dropdown d-inline">
+            <i class="bi bi-translate fs-3 " data-bs-toggle="dropdown" aria-expanded="false"></i>
+            <ul class="dropdown-menu dropdown-menu-start"
+                [ngClass]="themeService.currentTheme() === 'dark' ? 'dropdown-menu-dark' : ''">
+                <li>
+                    <a class="dropdown-item" (click)="langSwitcher($event,'en')">{{ "app.lang.english" | translate }}
+                    </a>
+                </li>
+                <li>
+                    <a class="dropdown-item" (click)="langSwitcher($event,'ka')">{{ "app.lang.kannada" | translate }}
+                    </a>
+                </li>
+            </ul>
+        </div>
         &nbsp; &nbsp; &nbsp;
         <span (click)="themeSwitcher()">
             <i [ngClass]="themeService.currentTheme() === 'dark' ? 'bi-sun-fill' : 'bi-moon-stars-fill' "

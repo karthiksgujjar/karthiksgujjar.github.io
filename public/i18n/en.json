@@ -1,0 +1,14 @@
+{
+    "app": {
+        "lang" : {
+            "english": "English",
+            "kannada": "Kannada"
+        }
+    },
+    "home":{
+        "hello": "Hello",
+        "bha" : "BHA",
+        "ra": "R",
+        "tha": "ATH"
+    }
+}

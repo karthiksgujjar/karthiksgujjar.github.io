@@ -14,7 +14,7 @@ export class NavbarComponent implements AfterViewInit {
 
   themeService: ThemeConfigService = inject(ThemeConfigService);
   @ViewChildren('navIcon') icons!: QueryList<ElementRef>;
-  @ViewChild('navContainer') navContainerElement! : ElementRef;
+  @ViewChild('navContainer') navContainer! : ElementRef;
 
   constructor(private renderer: Renderer2, private router: Router) { }
 
@@ -26,26 +26,11 @@ export class NavbarComponent implements AfterViewInit {
   }
 
   handleNavigationDisplay() {
-    if (this.navContainerElement.nativeElement.classList.contains('show')) {
-      this.renderer.removeClass(this.navContainerElement.nativeElement, 'show');
+    if (this.navContainer.nativeElement.classList.contains('show')) {
+      this.renderer.removeClass(this.navContainer.nativeElement, 'show');
     } else {
-      this.renderer.addClass(this.navContainerElement.nativeElement, 'show');
+      this.renderer.addClass(this.navContainer.nativeElement, 'show');
     }
-
-    this.icons.forEach((icon, index) => {
-
-      if (this.themeService.currentTheme() === "dark") {
-        this.renderer.addClass(icon.nativeElement, 'light');
-        this.renderer.removeClass(icon.nativeElement, 'dark');
-      } else {
-        this.renderer.addClass(icon.nativeElement, 'dark');
-        this.renderer.removeClass(icon.nativeElement, 'light');
-      }
-    });
-  }
-
-  hideNavigationDisplay() {
-    timer(1000).subscribe(() => this.handleNavigationDisplay());
   }
 
   showAllPages(currentRoute: string) {

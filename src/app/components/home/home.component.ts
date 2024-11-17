@@ -1,22 +1,13 @@
-import { ViewportScroller } from '@angular/common';
-import { Component, HostListener } from '@angular/core';
-import { Router, Scroll } from '@angular/router';
+import { Component } from '@angular/core';
+import { TranslatePipe } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [],
+  imports: [TranslatePipe],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
 })
 export class HomeComponent {
 
-  // constructor(private router:Router, private scroller: ViewportScroller){}
-
-  // @HostListener('window:scroll',['$event'])
-  // handleScroll(){
-  //   console.log(this.scroller.getScrollPosition());
-    
-  //   // this.router.navigateByUrl("/intro");
-  // }
 }

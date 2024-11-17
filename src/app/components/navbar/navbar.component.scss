@@ -10,18 +10,10 @@
     &.active {
         color: #0ca0e1;
     }
-
-    &.dark {
-        background-color: rgba(226, 243, 255, 0.8);
-    }
-
-    &.light {
-        background-color: rgba(13, 16, 19, 0.8);
-    }
 }
 
 .nav-container {
-    top: 10%;
+    top: 15%;
     transform: translateX(-500%);
     transition: 1s;
     opacity: 0;
@@ -32,14 +24,14 @@
     }
 }
 
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 768px) {
     .nav-container {
         top: 20%;
     }
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 480px) {
     .nav-container {
-        top: 16%;
+        top: 60%;
     }
 }
