@@ -2,15 +2,22 @@
     <app-navbar class="vertical-center z-3" />
     <div>
         <div class="dropdown d-inline">
-            <i class="bi bi-translate fs-3 " data-bs-toggle="dropdown" aria-expanded="false"></i>
-            <ul class="dropdown-menu dropdown-menu-start"
+            <span  data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-translate fs-3 "></i>
+            </span>
+            <ul class="dropdown-menu"
                 [ngClass]="themeService.currentTheme() === 'dark' ? 'dropdown-menu-dark' : ''">
                 <li>
-                    <a class="dropdown-item" (click)="langSwitcher($event,'en')">{{ "app.lang.english" | translate }}
+                    <a class="dropdown-item" data-lang-key="en" (click)="langSwitcher($event,'en')" #dropdownItem>{{ "app.lang.english" | translate }}
+                    </a>
+                    <hr class="m-0">
+                </li>
+                <li>
+                    <a class="dropdown-item" data-lang-key="kn" (click)="langSwitcher($event,'kn')" #dropdownItem>{{ "app.lang.kannada" | translate }}
                     </a>
                 </li>
                 <li>
-                    <a class="dropdown-item" (click)="langSwitcher($event,'ka')">{{ "app.lang.kannada" | translate }}
+                    <a class="dropdown-item" data-lang-key="hi" (click)="langSwitcher($event,'hi')" #dropdownItem>{{ "app.lang.hindi" | translate }}
                     </a>
                 </li>
             </ul>

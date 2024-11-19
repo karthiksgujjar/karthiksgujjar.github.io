@@ -1,14 +1,55 @@
 {
-    "app": {
-        "lang" : {
-            "english": "English",
-            "kannada": "Kannada"
-        }
-    },
-    "home":{
-        "hello": "Hello",
-        "bha" : "BHA",
-        "ra": "R",
-        "tha": "ATH"
-    }
+	"app": {
+		"lang": {
+			"english": "English",
+			"hindi": "Hindi",
+			"kannada": "Kannada"
+		}
+	},
+	"home": {
+		"bha": "BHA",
+		"designation": "A passionate software developer",
+		"from": "from",
+		"hello": "Hello",
+		"name_intro": "I'm Karthik",
+		"ra": "R",
+		"tha": "ATH"
+	},
+	"intro": {
+		"about_me": "About me",
+		"p1": "I'm a BCA graduate who thrived during an immersive internship at KodNest, where I immersed myself in Java full-stack web development. Currently, as a Trainee Software Developer at Star Knowledge Ventures, I've had the opportunity to work on diverse projects spanning real estate, healthcare, stock trading, and more. These experiences have sharpened my skills in .NET, Angular, and Azure technologies, while fueling my passion for innovation and teamwork.",
+		"p2": "I take pride in crafting efficient APIs, optimizing performance, and delivering seamless Azure deployments.Whether it's cutting site load times by 60% or building robust applications from scratch, I approach every project with a hands-on mindset and a focus on results.",
+		"p3": "Outside work, I enjoy creating side projects that combine fun with purpose, like my CPU Scheduling Visualizer,designed to simplify complex concepts for budding developers. I'm a firm believer in continuous learning and collaboration, always eager to explore new challenges and bring fresh ideas to the table.",
+		"p4": "Let's connect and build something remarkable together!"
+	},
+	"projects": {
+		"CPU Scheduling Visualizer": {
+			"description": "A side project developed to help juniors better understand the differences between various CPU Scheduling Algorithms. The site includes FCFS, SJF, RR, and Priority Scheduling algorithms.",
+			"heading": "CPU Scheduling Visualizer"
+		},
+		"description": "Description",
+		"heading": "Projects",
+		"Paying Guest Management System": {
+			"description": "A user-friendly Paying Guests Management software for PG building owners developed using .NET with C#. Streamlines guest and building management, replacing manual processes. Features staff management, guest admission/removal, fee collection, visitor tracking, and reporting.",
+			"heading": "Paying Guest Management System"
+		},
+		"Simple Library Surfer": {
+			"description": "Created a robust .NET WinForms CRUD application for library management, enabling librarians to efficiently handle book data including insertion, deletion, updating, and viewing. Features PDF report generation and advanced book search functionality.",
+			"heading": "Simple Library Surfer"
+		},
+		"skills_learnt": "Skills Learnt",
+		"Solar System": {
+			"description": "A static website showcasing our 'SOLAR SYSTEM' in the Milky Way Galaxy. It eliminates redundant data and provides a small yet powerful website for viewing overall data of the planets.",
+			"heading": "Solar System"
+		},
+		"tech_stack": "Tech Stack",
+		"view_code": "View Code",
+		"view_website": "View Website"
+	},
+	"skills": {
+		"backend": "Backend",
+		"frameworks_and_technologies": "Frameworks and Technologies",
+		"frontend": "Frontend",
+		"heading": "Skills"
+	}
 }

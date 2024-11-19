@@ -1,4 +1,4 @@
-import { Component, ElementRef, inject, Renderer2 } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, inject, OnInit, QueryList, Renderer2, ViewChildren } from '@angular/core';
 import { ActivatedRoute, RouterOutlet } from '@angular/router';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { ThemeConfigService } from './services/theme-config.service';
@@ -16,12 +16,45 @@ import { TranslatePipe, TranslateService } from '@ngx-translate/core';
     routeTransition
   ]
 })
-export class AppComponent {
+export class AppComponent implements OnInit, AfterViewInit {
 
   themeService: ThemeConfigService = inject(ThemeConfigService);
   previousLangElement!: EventTarget | null;
+  @ViewChildren('dropdownItem') dropdownItems!: QueryList<ElementRef>
+  appSupportedLanguages: string[] = [
+    "en", "kn", "hi"
+  ];
+  localeMapping: Record<string, string> = {
+    en: 'English',
+    kn: 'ಕನ್ನಡ',
+    hi: 'हिंदी',
+  };
+  currentLanguage!: string;
 
-  constructor(protected route: ActivatedRoute, private translate: TranslateService, private render: Renderer2) { }
+  constructor(protected route: ActivatedRoute, private translateService: TranslateService, private render: Renderer2) {
+    translateService.addLangs(this.appSupportedLanguages);
+  }
+
+  ngOnInit(): void {
+    let prefferedLanguage = localStorage.getItem("pref-lang");
+    if (prefferedLanguage == null) {
+      let browserLang = this.translateService.getBrowserLang() ?? '';
+      prefferedLanguage = this.appSupportedLanguages.includes(browserLang) ? browserLang : this.translateService.defaultLang;
+      localStorage.setItem('pref-lang', prefferedLanguage);
+    }
+    this.translateService.use(prefferedLanguage);
+    this.currentLanguage = this.localeMapping[prefferedLanguage];
+  }
+
+  ngAfterViewInit(): void {
+    const currentDropdownItem = this.dropdownItems.find(item => item.nativeElement.getAttribute('data-lang-key') === this.translateService.currentLang);
+
+    currentDropdownItem?.nativeElement.click();
+  }
+
+  ngAfterContentInit(): void {
+
+  }
 
   themeSwitcher() {
     this.themeService.currentTheme.update(value => (
@@ -35,6 +68,9 @@ export class AppComponent {
     }
     this.render.addClass(element.target, "active");
     this.previousLangElement = element.target;
-    this.translate.use(langCode);
+    localStorage.setItem('pref-lang', langCode);
+    this.translateService.use(langCode);
+
+    this.currentLanguage = this.localeMapping[langCode];
   }
 }

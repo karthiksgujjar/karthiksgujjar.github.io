@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { TranslatePipe } from '@ngx-translate/core';
+import { Component, inject } from '@angular/core';
+import { TranslatePipe, TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-home',
@@ -9,5 +9,5 @@ import { TranslatePipe } from '@ngx-translate/core';
   styleUrl: './home.component.scss',
 })
 export class HomeComponent {
-
+  translateService: TranslateService = inject(TranslateService);
 }

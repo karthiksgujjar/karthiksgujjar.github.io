@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { ProjectCardComponent } from './project-card/project-card.component';
+import { TranslatePipe } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-projects',
   standalone: true,
-  imports: [ProjectCardComponent],
+  imports: [ProjectCardComponent, TranslatePipe],
   templateUrl: './projects.component.html',
   styleUrl: './projects.component.scss'
 })
@@ -15,7 +16,7 @@ export class ProjectsComponent {
       "ProjectImageSource": "assets/images/Solar-System.webp",
       "ProjectImageAltText": "Solar System Image of website",
       "ProjectTitle": "Solar System",
-      "ProjectDescription": "A static website showcasing our 'SOLAR SYSTEM' in the Milky Way Galaxy. It eliminates redundant data and provides a small yet powerful website for viewing overall data of the planets.",
+      "ProjectDescription": "A static website showcasing our 'SOLAR SYSTEM' in the Milky Way Galaxy. It eliminates redundant data and provides a small yet powerful website for viewing overall data of the planets",
       "TechStackImageSources": [
         {
           "ImageSource": "assets/logos/html5.svg",
@@ -38,7 +39,7 @@ export class ProjectsComponent {
       "ProjectImageSource": "assets/images/SLS.webp",
       "ProjectImageAltText": "Simple Library Surfer desktop application's main form image",
       "ProjectTitle": "Simple Library Surfer",
-      "ProjectDescription": "Created a robust .NET WinForms CRUD application for library management, enabling librarians to efficiently handle book data including insertion, deletion, updating, and viewing. Features PDF report generation and advanced book search functionality.",
+      "ProjectDescription": "Created a robust .NET WinForms CRUD application for library management, enabling librarians to efficiently handle book data including insertion, deletion, updating, and viewing. Features PDF report generation and advanced book search functionality",
       "TechStackImageSources": [
         {
           "ImageSource": "assets/logos/dotnet.svg",
@@ -66,7 +67,7 @@ export class ProjectsComponent {
       "ProjectImageSource": "assets/images/PGMS.webp",
       "ProjectImageAltText": "Paying Guest Management System desktop application's main form image",
       "ProjectTitle": "Paying Guest Management System",
-      "ProjectDescription": "A user-friendly Paying Guests Management software for PG building owners developed using .NET with C#. Streamlines guest and building management, replacing manual processes. Features staff management, guest admission/removal, fee collection, visitor tracking, and reporting.",
+      "ProjectDescription": "A user-friendly Paying Guests Management software for PG building owners developed using .NET with C#. Streamlines guest and building management, replacing manual processes. Features staff management, guest admission/removal, fee collection, visitor tracking, and reporting",
       "TechStackImageSources": [
         {
           "ImageSource": "assets/logos/dotnet.svg",
@@ -94,7 +95,7 @@ export class ProjectsComponent {
       "ProjectImageSource": "assets/images/CPU-Scheduling-Visualizer.webp",
       "ProjectImageAltText": "CPU Scheduling Demo Website's Homepage",
       "ProjectTitle": "CPU Scheduling Visualizer",
-      "ProjectDescription": "A side project developed to help juniors better understand the differences between various CPU Scheduling Algorithms. The site includes FCFS, SJF, RR, and Priority Scheduling algorithms.",
+      "ProjectDescription": "A side project developed to help juniors better understand the differences between various CPU Scheduling Algorithms. The site includes FCFS, SJF, RR, and Priority Scheduling algorithms",
       "TechStackImageSources": [
         {
           "ImageSource": "assets/logos/html5.svg",

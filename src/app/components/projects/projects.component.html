@@ -1,5 +1,5 @@
 <div class="mb-5 container">
-    <p class="fs-1">Projects</p>
+    <p class="fs-1">{{ 'projects.heading' | translate }}</p>
     <section class="row row-cols-1 row-cols-md-3 g-4 g-lg-5">
         @for (project of projectList; track $index) {
             <app-project-card [projectDetails]="project"/>
