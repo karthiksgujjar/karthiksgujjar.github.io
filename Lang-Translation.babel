@@ -341,11 +341,11 @@
 											</translation>
 											<translation>
 												<language>hi-IN</language>
-												<approved>false</approved>
+												<approved>true</approved>
 											</translation>
 											<translation>
 												<language>kn-IN</language>
-												<approved>false</approved>
+												<approved>true</approved>
 											</translation>
 										</translations>
 									</concept_node>
@@ -422,11 +422,11 @@
 											</translation>
 											<translation>
 												<language>hi-IN</language>
-												<approved>false</approved>
+												<approved>true</approved>
 											</translation>
 											<translation>
 												<language>kn-IN</language>
-												<approved>false</approved>
+												<approved>true</approved>
 											</translation>
 										</translations>
 									</concept_node>
@@ -465,11 +465,11 @@
 											</translation>
 											<translation>
 												<language>hi-IN</language>
-												<approved>false</approved>
+												<approved>true</approved>
 											</translation>
 											<translation>
 												<language>kn-IN</language>
-												<approved>false</approved>
+												<approved>true</approved>
 											</translation>
 										</translations>
 									</concept_node>
@@ -531,7 +531,7 @@
 											</translation>
 											<translation>
 												<language>kn-IN</language>
-												<approved>false</approved>
+												<approved>true</approved>
 											</translation>
 										</translations>
 									</concept_node>

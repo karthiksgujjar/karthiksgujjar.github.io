@@ -1,22 +1,22 @@
-import { AfterViewInit, Component, ElementRef, inject, OnInit, QueryList, Renderer2, ViewChildren } from '@angular/core';
+import { Component, ElementRef, inject, OnInit, QueryList, Renderer2, ViewChildren } from '@angular/core';
 import { ActivatedRoute, RouterOutlet } from '@angular/router';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { ThemeConfigService } from './services/theme-config.service';
 import { NgClass } from '@angular/common';
 import { routeTransition } from '../route-transition';
-import { TranslatePipe, TranslateService } from '@ngx-translate/core';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, NavbarComponent, NgClass, TranslatePipe],
+  imports: [RouterOutlet, NavbarComponent, NgClass],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
   animations: [
     routeTransition
   ]
 })
-export class AppComponent implements OnInit, AfterViewInit {
+export class AppComponent implements OnInit {
 
   themeService: ThemeConfigService = inject(ThemeConfigService);
   previousLangElement!: EventTarget | null;
@@ -24,17 +24,15 @@ export class AppComponent implements OnInit, AfterViewInit {
   appSupportedLanguages: string[] = [
     "en", "kn", "hi"
   ];
-  localeMapping: Record<string, string> = {
-    en: 'English',
-    kn: 'ಕನ್ನಡ',
-    hi: 'हिंदी',
-  };
-  currentLanguage!: string;
-
+ 
   constructor(protected route: ActivatedRoute, private translateService: TranslateService, private render: Renderer2) {
     translateService.addLangs(this.appSupportedLanguages);
   }
 
+  prepareRoute(outlet: RouterOutlet) {
+    return outlet && outlet.activatedRouteData && outlet.activatedRouteData['animation'];
+  }
+  
   ngOnInit(): void {
     let prefferedLanguage = localStorage.getItem("pref-lang");
     if (prefferedLanguage == null) {
@@ -43,17 +41,12 @@ export class AppComponent implements OnInit, AfterViewInit {
       localStorage.setItem('pref-lang', prefferedLanguage);
     }
     this.translateService.use(prefferedLanguage);
-    this.currentLanguage = this.localeMapping[prefferedLanguage];
   }
 
   ngAfterViewInit(): void {
     const currentDropdownItem = this.dropdownItems.find(item => item.nativeElement.getAttribute('data-lang-key') === this.translateService.currentLang);
 
     currentDropdownItem?.nativeElement.click();
-  }
-
-  ngAfterContentInit(): void {
-
   }
 
   themeSwitcher() {
@@ -70,7 +63,5 @@ export class AppComponent implements OnInit, AfterViewInit {
     this.previousLangElement = element.target;
     localStorage.setItem('pref-lang', langCode);
     this.translateService.use(langCode);
-
-    this.currentLanguage = this.localeMapping[langCode];
   }
 }

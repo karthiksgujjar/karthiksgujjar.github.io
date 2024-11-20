@@ -2,11 +2,12 @@ import { AfterViewInit, Component, ElementRef, inject, QueryList, Renderer2, Vie
 import { Router, RouterLink, RouterLinkActive } from '@angular/router';
 import { ThemeConfigService } from '../../services/theme-config.service';
 import { interval, take, timer } from 'rxjs';
+import { NgClass } from '@angular/common';
 
 @Component({
   selector: 'app-navbar',
   standalone: true,
-  imports: [RouterLink, RouterLinkActive],
+  imports: [RouterLink, RouterLinkActive, NgClass],
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.scss'
 })

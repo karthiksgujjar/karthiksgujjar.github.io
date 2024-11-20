@@ -12,6 +12,17 @@
     }
 }
 
+.nav-icons i{
+    padding: 10% 20%;
+    &.semi-trans-bg-white {
+        background-color: rgba(255, 255, 255, 0.9);
+    }
+
+    &.semi-trans-bg-black {
+        background-color: rgba(0, 0, 0, 0.9);
+    }
+}
+
 .nav-container {
     top: 15%;
     transform: translateX(-500%);

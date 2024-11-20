@@ -8,16 +8,16 @@
             <ul class="dropdown-menu"
                 [ngClass]="themeService.currentTheme() === 'dark' ? 'dropdown-menu-dark' : ''">
                 <li>
-                    <a class="dropdown-item" data-lang-key="en" (click)="langSwitcher($event,'en')" #dropdownItem>{{ "app.lang.english" | translate }}
+                    <a class="dropdown-item" data-lang-key="en" (click)="langSwitcher($event,'en')" #dropdownItem>English
                     </a>
                     <hr class="m-0">
                 </li>
                 <li>
-                    <a class="dropdown-item" data-lang-key="kn" (click)="langSwitcher($event,'kn')" #dropdownItem>{{ "app.lang.kannada" | translate }}
+                    <a class="dropdown-item" data-lang-key="kn" (click)="langSwitcher($event,'kn')" #dropdownItem>ಕನ್ನಡ
                     </a>
                 </li>
                 <li>
-                    <a class="dropdown-item" data-lang-key="hi" (click)="langSwitcher($event,'hi')" #dropdownItem>{{ "app.lang.hindi" | translate }}
+                    <a class="dropdown-item" data-lang-key="hi" (click)="langSwitcher($event,'hi')" #dropdownItem>हिंदी
                     </a>
                 </li>
             </ul>
@@ -30,6 +30,6 @@
     </div>
 </div>
 
-<div [@routeTransition]="route.snapshot.data" style="display: contents;">
-    <router-outlet />
+<div [@routeTransition]="prepareRoute(outlet)">
+    <router-outlet  #outlet="outlet" />
 </div>
