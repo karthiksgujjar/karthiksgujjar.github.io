@@ -1,0 +1,20 @@
+<nav class="mt-2">
+    <button type="button" class="navbar-brand btn border-0 mb-3" (click)="handleNavigationDisplay()">
+        <img src="assets/logos/KhzInsignia.webp" alt="Khz Insignia" width="39" height="39">
+    </button>
+    <div class="position-absolute nav-container rounded text-center d-flex gap-5" #navContainer>
+        <p class="nav-icons rounded-2" [routerLinkActiveOptions]="{ exact: true }" routerLink="/"
+            routerLinkActive="active" title="Home">
+            <i class="bi bi-house-door-fill fs-2 rounded-circle text-center" [ngClass]="themeService.currentTheme() === 'dark' ? 'semi-trans-bg-black' : 'semi-trans-bg-white' "></i>
+        </p>
+        <p class="nav-icons rounded-2" routerLink="intro" routerLinkActive="active" title="Who am I?">
+            <i class="bi bi-person-fill fs-2 rounded-circle text-center" [ngClass]="themeService.currentTheme() === 'dark' ? 'semi-trans-bg-black' : 'semi-trans-bg-white' "></i>
+        </p>
+        <p class="nav-icons rounded-2" routerLink="skills" routerLinkActive="active" title="My Skills">
+            <i class="bi bi-code-slash fs-2 rounded-circle text-center" [ngClass]="themeService.currentTheme() === 'dark' ? 'semi-trans-bg-black' : 'semi-trans-bg-white' "></i>
+        </p>
+        <p class="nav-icons rounded-2" routerLink="projects" routerLinkActive="active" title="Projects">
+            <i class="bi bi-laptop fs-2 rounded-circle text-center" [ngClass]="themeService.currentTheme() === 'dark' ? 'semi-trans-bg-black' : 'semi-trans-bg-white' "></i>
+        </p>
+    </div>
+</nav>

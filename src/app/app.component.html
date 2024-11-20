@@ -1,0 +1,35 @@
+<div class="d-flex justify-content-between position-sticky top-0 z-3 p-2">
+    <app-navbar class="vertical-center z-3" />
+    <div>
+        <div class="dropdown d-inline">
+            <span  data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-translate fs-3 "></i>
+            </span>
+            <ul class="dropdown-menu"
+                [ngClass]="themeService.currentTheme() === 'dark' ? 'dropdown-menu-dark' : ''">
+                <li>
+                    <a class="dropdown-item" data-lang-key="en" (click)="langSwitcher($event,'en')" #dropdownItem>English
+                    </a>
+                    <hr class="m-0">
+                </li>
+                <li>
+                    <a class="dropdown-item" data-lang-key="kn" (click)="langSwitcher($event,'kn')" #dropdownItem>ಕನ್ನಡ
+                    </a>
+                </li>
+                <li>
+                    <a class="dropdown-item" data-lang-key="hi" (click)="langSwitcher($event,'hi')" #dropdownItem>हिंदी
+                    </a>
+                </li>
+            </ul>
+        </div>
+        &nbsp; &nbsp; &nbsp;
+        <span (click)="themeSwitcher()">
+            <i [ngClass]="themeService.currentTheme() === 'dark' ? 'bi-sun-fill' : 'bi-moon-stars-fill' "
+                class="bi fs-3"></i>
+        </span>
+    </div>
+</div>
+
+<div [@routeTransition]="prepareRoute(outlet)">
+    <router-outlet  #outlet="outlet" />
+</div>

@@ -1,0 +1,48 @@
+.nav-icons {
+    cursor: pointer;
+    transition: transform 0.5s ease,
+        opacity 0.5s ease;
+
+    *:hover {
+        color: #0ca0e1;
+    }
+
+    &.active {
+        color: #0ca0e1;
+    }
+}
+
+.nav-icons i{
+    padding: 10% 20%;
+    &.semi-trans-bg-white {
+        background-color: rgba(255, 255, 255, 0.9);
+    }
+
+    &.semi-trans-bg-black {
+        background-color: rgba(0, 0, 0, 0.9);
+    }
+}
+
+.nav-container {
+    top: 15%;
+    transform: translateX(-500%);
+    transition: 1s;
+    opacity: 0;
+    &.show {
+        transform: translateX(25%);
+        transition: 0.5s;
+        opacity: 1;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .nav-container {
+        top: 20%;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .nav-container {
+        top: 60%;
+    }
+}

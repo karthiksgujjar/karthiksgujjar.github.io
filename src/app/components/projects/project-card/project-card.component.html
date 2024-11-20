@@ -1,0 +1,36 @@
+<div class="col">
+    <div class="card h-100 color-bgColor-inherit card-shadow">
+        <img [src]="projectDetails.ProjectImageSource" class="card-img-top" [alt]="projectDetails.ProjectImageAltText">
+        <div class="card-body">
+            <h5 class="card-title">{{ 'projects.' + projectDetails.ProjectTitle + '.heading' | translate }}</h5>
+            <details class="my-3">
+                <summary class="fw-semibold">{{ 'projects.description' | translate }}</summary>
+                <p class="ms-3">
+                    {{ 'projects.' + projectDetails.ProjectTitle + '.description' | translate }}
+                </p>
+            </details>
+            <details>
+                <summary class="fw-semibold">{{ 'projects.tech_stack' | translate }}</summary>
+                <div class="ms-3">
+                    @for (tech of projectDetails.TechStackImageSources; track $index) {
+                        <img [src]="tech.ImageSource" [alt]="tech.ImageAltText" />
+                    }
+                </div>
+            </details>
+            <details class="my-3">
+                <summary class="fw-semibold">{{ 'projects.skills_learnt' | translate }}</summary>
+                <ul>
+                    @for (skill of projectDetails.SkillsLearnt; track $index) {
+                        <li>{{skill}}</li>
+                    }
+                </ul>
+            </details>
+        </div>
+        <div class="card-footer card-footer-shadow">
+            <div class="d-flex flex-wrap justify-content-between ">
+                <a [href]="projectDetails.SourceCodeURL" class="text-decoration-none" target="_blank">{{ 'projects.view_code' | translate }}</a>
+                <a [href]="projectDetails.LiveSiteURL" class="text-decoration-none" target="_blank">{{ 'projects.view_website' | translate }}</a>
+            </div>
+        </div>
+    </div>
+</div>
