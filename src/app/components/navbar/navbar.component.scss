@@ -1,7 +1,7 @@
 .nav-icons {
     cursor: pointer;
-    transition: transform 0.5s ease,
-        opacity 0.5s ease;
+    position: relative;
+    transition: transform 0.5s ease, opacity 0.5s ease; // This line will ensure the transition property is applied to all the elements. 
 
     *:hover {
         color: #0ca0e1;
@@ -12,8 +12,9 @@
     }
 }
 
-.nav-icons i{
+.nav-icons i {
     padding: 10% 20%;
+
     &.semi-trans-bg-white {
         background-color: rgba(255, 255, 255, 0.9);
     }
@@ -25,24 +26,100 @@
 
 .nav-container {
     top: 15%;
-    transform: translateX(-500%);
-    transition: 1s;
-    opacity: 0;
+    transform: translateX(25%);
+}
+
+.nav-icons {
+    opacity: 0; // This line will ensure that all icons will be hidden initially.
+
     &.show {
-        transform: translateX(25%);
-        transition: 0.5s;
+        opacity: 1; // This line will ensure that all icons wiil be displayed upon having the class show.
+    }
+}
+
+.nav-icon-1 {
+    &.active {
+        z-index: 1000; // This line will ensure that the current route icon will be displayed above all other icons.
+        opacity: 1; // This line will ensure that the current route icon will be displayed beside the logo.
+    }
+}
+
+.nav-icon-2 {
+    transform: translateX(-250%);
+    &.show {
+        transform: translateX(0); // This line ensures that all nav-icons are translated to their original position when show class is added to it. As this will be inherited and does not change based on the screen size, this will be applied by default to elements. Only transform values will get changed based on the screen size.
+    }
+
+    &.active {
+        z-index: 1000;
+        opacity: 1;
+    }
+}
+
+.nav-icon-3 {
+    transform: translateX(-500%);
+    &.show {
+        transform: translateX(0);
+    }
+
+    &.active {
+        z-index: 1000;
+        opacity: 1;
+    }
+
+}
+
+.nav-icon-4 {
+    transform: translateX(-750%);
+    &.show {
+        transform: translateX(0);
+    }
+
+    &.active {
+        z-index: 1000;
         opacity: 1;
     }
 }
 
 @media only screen and (max-width: 768px) {
+
     .nav-container {
         top: 20%;
     }
+
+    .nav-icon-2 {
+        transform: translateX(-280%);
+    }
+
+    .nav-icon-3 {
+        transform: translateX(-560%);
+    }
+
+    .nav-icon-4 {
+        transform: translateX(-840%);
+    }
 }
 
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 432px) {
+
     .nav-container {
-        top: 60%;
+        transition: 0.6s ease; // The transition is only required for mobile devices.
+        top: 25%;
+
+        &.show {
+            top: 60%;
+        }
+    }
+
+    .nav-icon-2 {
+        transform: translateX(-300%);
+    }
+
+    .nav-icon-3 {
+        transform: translateX(-600%);
+    }
+
+    .nav-icon-4 {
+        transform: translateX(-900%);
     }
 }

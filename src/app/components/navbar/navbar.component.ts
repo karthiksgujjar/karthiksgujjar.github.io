@@ -15,15 +15,12 @@ export class NavbarComponent implements AfterViewInit {
 
   themeService: ThemeConfigService = inject(ThemeConfigService);
   @ViewChildren('navIcon') icons!: QueryList<ElementRef>;
-  @ViewChild('navContainer') navContainer! : ElementRef;
+  @ViewChild('navContainer') navContainer!: ElementRef;
 
   constructor(private renderer: Renderer2, private router: Router) { }
 
   ngAfterViewInit() {
     timer(500).subscribe(() => this.handleNavigationDisplay());
-    interval(1500).pipe(take(4)).subscribe(() => this.showAllPages(this.router.url)).add(() => {
-      timer(500).subscribe(() => this.handleNavigationDisplay());
-    });
   }
 
   handleNavigationDisplay() {
@@ -32,10 +29,18 @@ export class NavbarComponent implements AfterViewInit {
     } else {
       this.renderer.addClass(this.navContainer.nativeElement, 'show');
     }
+
+    this.icons.forEach((icon: ElementRef) => {
+      if (icon.nativeElement.classList.contains('show')) {
+        this.renderer.removeClass(icon.nativeElement, 'show');
+      } else {
+        this.renderer.addClass(icon.nativeElement, 'show');
+      }
+    });
   }
 
   showAllPages(currentRoute: string) {
-    
+
     switch (currentRoute) {
       case '/':
         this.router.navigateByUrl("/intro");

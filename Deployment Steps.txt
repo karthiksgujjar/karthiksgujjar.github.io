@@ -1,0 +1,8 @@
+Steps to deploy the portfolio site:
+1. Merge the changes into main branch from PortfolioUsingAngular
+2. Do git pull --rebase origin main on Deployment branch
+3. Run the deployment command in terminal: 
+	ng build --output-path docs --base-href https://www.karthiks.dev/
+4. Run, git add . --> git commit -m "Deploy: your-commit-message" --> git push
+5. It'll be deployed automatically.
+
